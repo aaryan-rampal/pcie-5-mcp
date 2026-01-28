@@ -69,9 +69,10 @@ class PDFRegisterParser:
     """Parser for PCIe register definitions using pdfplumber."""
 
     # Pattern for register headers in text
+    # Must start with section like "7.5.1.1.3" (at least 2 dots), followed by register name
     REGISTER_HEADER_PATTERN = re.compile(
-        r'(\d+(?:\.\d+)*)\s+(.+?)\s*\(Offset\s+([0-9A-Fa-f]+h)\)',
-        re.IGNORECASE
+        r'^(\d+(?:\.\d+){2,})\s*([A-Z][^(]+?)\s*\(Offset\s+([0-9A-Fa-f]+h)\)',
+        re.MULTILINE
     )
 
     # Register attributes
@@ -139,33 +140,42 @@ class PDFRegisterParser:
                         page=page_num + 1
                     )
 
-                # Extract tables from this page
-                tables = page.extract_tables()
+                # Try text-based field parsing first (more reliable than table extraction)
+                text_fields_found = False
+                if current_register:
+                    text_fields = self._parse_fields_from_text(page_text)
+                    if text_fields:
+                        current_register.fields.extend(text_fields)
+                        text_fields_found = True
 
-                for table in tables:
-                    if not table or len(table) < 2:
-                        continue
+                # Only try table extraction if text parsing didn't find anything
+                if not text_fields_found:
+                    tables = page.extract_tables()
 
-                    # Check if this is a register bit field table
-                    header_row = table[0]
-                    if not header_row:
-                        continue
+                    for table in tables:
+                        if not table or len(table) < 2:
+                            continue
 
-                    # Look for table with "Bit", "Location", "Description", "Attributes" columns
-                    header_text = ' '.join([str(cell) if cell else '' for cell in header_row]).lower()
+                        # Check if this is a register bit field table
+                        header_row = table[0]
+                        if not header_row:
+                            continue
 
-                    if 'bit' in header_text and ('attribute' in header_text or 'register' in header_text):
-                        # This looks like a register bit field table
-                        fields = self._parse_table_fields(table)
+                        # Look for table with "Bit", "Location", "Description", "Attributes" columns
+                        header_text = ' '.join([str(cell) if cell else '' for cell in header_row]).lower()
 
-                        if current_register and fields:
-                            current_register.fields.extend(fields)
+                        if 'bit' in header_text and ('attribute' in header_text or 'register' in header_text):
+                            # This looks like a register bit field table
+                            fields = self._parse_table_fields(table)
 
-                    # Also try parsing tables where all columns are merged into one cell
-                    elif len(table[0]) <= 2:  # Very few columns - might be merged
-                        fields = self._parse_merged_table(table)
-                        if current_register and fields:
-                            current_register.fields.extend(fields)
+                            if current_register and fields:
+                                current_register.fields.extend(fields)
+
+                        # Also try parsing tables where all columns are merged into one cell
+                        elif len(table[0]) <= 2:  # Very few columns - might be merged
+                            fields = self._parse_merged_table(table)
+                            if current_register and fields:
+                                current_register.fields.extend(fields)
 
             # Save last register
             if current_register:
@@ -322,6 +332,146 @@ class PDFRegisterParser:
                         attribute=attribute,
                         description=description
                     ))
+
+        return fields
+
+    def _parse_fields_from_text(self, text: str) -> List[RegisterField]:
+        """
+        Parse register fields directly from text.
+
+        This handles the case where pdfplumber table extraction fails and all
+        table data is in merged cells. We parse text line by line looking for
+        patterns like:
+
+        "0 I/O Space Enable- Controls..."
+        "continued description text..."
+        "more description... RW"
+
+        The attribute (RW, RO, etc.) appears at the end of the description,
+        which may span multiple lines.
+
+        Args:
+            text: Page text content
+
+        Returns:
+            List of RegisterField objects
+        """
+        fields = []
+        lines = text.split('\n')
+
+        i = 0
+        while i < len(lines):
+            line = lines[i].strip()
+
+            # Look for line starting with bit number followed by field name
+            # Pattern: "0 Field Name-" or "7:5 Field Name -"
+            # Note: Use non-lazy match to capture full field name until dash
+            match = re.match(r'^(\d+(?::\d+)?)\s+([A-Z][\w\s/]+?)\s*-', line)
+
+            if match:
+                bit_str = match.group(1)
+                field_name = match.group(2).strip()
+
+                # Collect the full description across multiple lines
+                # Continue until we find a line ending with an attribute or hit next field
+                first_desc_line = line[match.end():].strip()
+                description_lines = []
+                j = i + 1
+                attribute = None
+
+                # Check if first line ends with attribute
+                for attr in self.ATTRIBUTES:
+                    if first_desc_line.endswith(' ' + attr) or first_desc_line.endswith(attr):
+                        # Extract attribute from first line
+                        if first_desc_line.endswith(' ' + attr):
+                            first_desc_line = first_desc_line[:-len(attr)-1].strip()
+                        else:
+                            first_desc_line = first_desc_line[:-len(attr)].strip()
+                        attribute = attr
+                        break
+
+                description_lines.append(first_desc_line)
+
+                # Always collect continuation lines regardless of attribute position
+                # The attribute appearing at the end of first line is just table column layout
+                # Continue until we hit a structural boundary (next field, page footer, etc.)
+                while j < len(lines):
+                    next_line = lines[j].strip()
+
+                    # Stop if we hit another field (starts with bit number)
+                    if re.match(r'^\d+(?::\d+)?\s+[A-Z]', next_line):
+                        break
+
+                    # Stop if we hit a register header or table header or page number
+                    if re.match(r'^\d+\.\d+\.\d+', next_line) or \
+                       'BitLocation' in next_line or \
+                       'Register Description' in next_line or \
+                       next_line.startswith('Table ') or \
+                       next_line.startswith('Figure ') or \
+                       next_line.startswith('Page ') or \
+                       re.match(r'^Page \d+$', next_line):
+                        break
+
+                    # Check if this line ends with an attribute
+                    # Note: We may have already found attribute on first line from table column
+                    # Continue collecting description regardless
+                    line_has_attr = False
+                    for attr in self.ATTRIBUTES:
+                        if next_line.endswith(attr) or next_line.endswith(attr + '.'):
+                            # Found an attribute marker, but keep collecting description
+                            if next_line.endswith(attr + '.'):
+                                desc_part = next_line[:-len(attr)-1].strip()
+                            elif next_line.endswith(attr):
+                                desc_part = next_line[:-len(attr)].strip()
+                            else:
+                                desc_part = next_line
+
+                            # Save attribute if we don't have one yet
+                            if not attribute:
+                                attribute = attr
+
+                            if desc_part:
+                                description_lines.append(desc_part)
+                            line_has_attr = True
+                            break
+
+                    # Add this line to description if it doesn't have attribute marker
+                    if not line_has_attr and next_line:
+                        description_lines.append(next_line)
+
+                    j += 1
+
+                # Join description lines
+                description = ' '.join(description_lines)
+
+                # If we didn't find attribute in multiline, check if it's at end of first line
+                if not attribute:
+                    for attr in self.ATTRIBUTES:
+                        if description.endswith(attr) or description.endswith(attr + '.'):
+                            if description.endswith(attr + '.'):
+                                description = description[:-len(attr)-1].strip()
+                                attribute = attr
+                            else:
+                                description = description[:-len(attr)].strip()
+                                attribute = attr
+                            break
+
+                # Default to RW if no attribute found
+                if not attribute:
+                    attribute = "RW"
+
+                # Create field
+                fields.append(RegisterField(
+                    bits=bit_str,
+                    name=field_name,
+                    attribute=attribute,
+                    description=description
+                ))
+
+                # Move to where we stopped
+                i = j
+            else:
+                i += 1
 
         return fields
 
