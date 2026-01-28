@@ -65,9 +65,10 @@ class Register:
 class RegisterParser:
     """Parser for PCIe register definitions from spec text."""
 
-    # Pattern: 7.5.3.4 Device Control Register (Offset 08h)
+    # Pattern: 7.5.3.4 Device Control Register(Offset 08h)
+    # Note: No space before (Offset in actual spec
     REGISTER_HEADER_PATTERN = re.compile(
-        r'^(\d+(?:\.\d+)*)\s+(.+?)\s+\(Offset\s+([0-9A-Fa-f]+h)\)',
+        r'^(\d+(?:\.\d+)*)\s+(.+?)\(Offset\s+([0-9A-Fa-f]+h)\)',
         re.MULTILINE
     )
 
@@ -128,14 +129,14 @@ class RegisterParser:
             # Parse fields from this block
             fields = self._parse_fields(register_block)
 
-            if fields:  # Only add if we found fields
-                register = Register(
-                    section=section,
-                    name=name,
-                    offset=offset,
-                    fields=fields
-                )
-                self.registers[name] = register
+            # Add register even if no fields parsed (fields parsing is complex)
+            register = Register(
+                section=section,
+                name=name,
+                offset=offset,
+                fields=fields if fields else []
+            )
+            self.registers[name] = register
 
         return self.registers
 
