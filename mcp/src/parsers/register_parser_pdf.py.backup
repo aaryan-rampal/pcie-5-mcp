@@ -93,11 +93,7 @@ class PDFRegisterParser:
 
     def parse(self, start_page: int = 673, end_page: int = 900) -> Dict[str, Register]:
         """
-        Parse registers from PDF using pre-collected text (Option 1).
-
-        This approach collects all text from all pages first, then parses
-        in a single pass. This prevents field descriptions from being
-        truncated at page boundaries.
+        Parse registers from PDF using table extraction.
 
         Args:
             start_page: Start page (Chapter 7 begins around 673)
@@ -113,130 +109,80 @@ class PDFRegisterParser:
         print(f"Parsing pages {start_page}-{end_page}...")
 
         with pdfplumber.open(self.pdf_path) as pdf:
-            # PHASE 1: Pre-collect all text from all pages
-            print("Phase 1: Collecting text from all pages...")
-            page_texts = []
-            page_numbers = {}  # Map text position to page number
+            current_register = None
+            current_section = None
+            current_name = None
+            current_offset = None
 
             for page_num in range(start_page - 1, min(end_page, len(pdf.pages))):
                 page = pdf.pages[page_num]
                 page_text = page.extract_text()
 
-                # Track starting position of this page in combined text
-                current_pos = sum(len(t) + 1 for t in page_texts)  # +1 for newline
-                page_numbers[current_pos] = page_num + 1
+                # Look for register headers in text
+                for match in self.REGISTER_HEADER_PATTERN.finditer(page_text):
+                    section = match.group(1)
+                    name = match.group(2).strip()
+                    offset = match.group(3)
 
-                page_texts.append(page_text)
+                    # Save previous register if exists
+                    if current_register:
+                        self.registers[current_name] = current_register
 
-            # Combine all text, removing page footers
-            combined_text = self._combine_page_texts(page_texts)
+                    # Start new register
+                    current_section = section
+                    current_name = name
+                    current_offset = offset
+                    current_register = Register(
+                        section=section,
+                        name=name,
+                        offset=offset,
+                        fields=[],
+                        page=page_num + 1
+                    )
 
-            # PHASE 2: Find all register headers and their positions
-            print("Phase 2: Finding register headers...")
-            register_matches = []
-            for match in self.REGISTER_HEADER_PATTERN.finditer(combined_text):
-                section = match.group(1)
-                name = match.group(2).strip()
-                offset = match.group(3)
-                position = match.start()
+                # Try text-based field parsing first (more reliable than table extraction)
+                text_fields_found = False
+                if current_register:
+                    text_fields = self._parse_fields_from_text(page_text)
+                    if text_fields:
+                        current_register.fields.extend(text_fields)
+                        text_fields_found = True
 
-                # Find which page this register is on
-                page_num = self._find_page_for_position(position, page_numbers, page_texts)
+                # Only try table extraction if text parsing didn't find anything
+                if not text_fields_found:
+                    tables = page.extract_tables()
 
-                register_matches.append({
-                    'section': section,
-                    'name': name,
-                    'offset': offset,
-                    'position': position,
-                    'page': page_num
-                })
+                    for table in tables:
+                        if not table or len(table) < 2:
+                            continue
 
-            print(f"Found {len(register_matches)} register headers")
+                        # Check if this is a register bit field table
+                        header_row = table[0]
+                        if not header_row:
+                            continue
 
-            # PHASE 3: Parse fields for each register from combined text
-            print("Phase 3: Parsing fields from combined text...")
-            for i, reg_info in enumerate(register_matches):
-                # Get text section for this register (from this header to next header)
-                start_pos = reg_info['position']
-                end_pos = register_matches[i + 1]['position'] if i + 1 < len(register_matches) else len(combined_text)
-                register_text = combined_text[start_pos:end_pos]
+                        # Look for table with "Bit", "Location", "Description", "Attributes" columns
+                        header_text = ' '.join([str(cell) if cell else '' for cell in header_row]).lower()
 
-                # Parse fields from this register's text
-                fields = self._parse_fields_from_text(register_text)
+                        if 'bit' in header_text and ('attribute' in header_text or 'register' in header_text):
+                            # This looks like a register bit field table
+                            fields = self._parse_table_fields(table)
 
-                # Create register object
-                register = Register(
-                    section=reg_info['section'],
-                    name=reg_info['name'],
-                    offset=reg_info['offset'],
-                    fields=fields,
-                    page=reg_info['page']
-                )
+                            if current_register and fields:
+                                current_register.fields.extend(fields)
 
-                self.registers[reg_info['name']] = register
+                        # Also try parsing tables where all columns are merged into one cell
+                        elif len(table[0]) <= 2:  # Very few columns - might be merged
+                            fields = self._parse_merged_table(table)
+                            if current_register and fields:
+                                current_register.fields.extend(fields)
+
+            # Save last register
+            if current_register:
+                self.registers[current_name] = current_register
 
         print(f"Found {len(self.registers)} registers with table data")
         return self.registers
-
-    def _combine_page_texts(self, page_texts: List[str]) -> str:
-        """
-        Combine page texts, removing page footers, headers, and repeated table headers.
-
-        Args:
-            page_texts: List of text strings, one per page
-
-        Returns:
-            Combined text with page boundaries removed
-        """
-        cleaned_texts = []
-
-        for text in page_texts:
-            lines = text.split('\n')
-            cleaned_lines = []
-
-            for line in lines:
-                line_stripped = line.strip()
-
-                # Skip page footers (e.g., "Page 686")
-                if re.match(r'^Page \d+$', line_stripped):
-                    continue
-                # Skip page headers (e.g., "5.0-1.0-PUB—PCI Express...")
-                if 'PCI Express' in line and 'Specification' in line:
-                    continue
-                # Skip repeated table headers that appear at page boundaries
-                if line_stripped == 'BitLocation Register Description Attributes':
-                    continue
-                if line_stripped == 'Bit Location Register Description Attributes':
-                    continue
-
-                cleaned_lines.append(line)
-
-            cleaned_texts.append('\n'.join(cleaned_lines))
-
-        return '\n'.join(cleaned_texts)
-
-    def _find_page_for_position(self, position: int, page_numbers: Dict[int, int],
-                                 page_texts: List[str]) -> int:
-        """
-        Find which page a text position corresponds to.
-
-        Args:
-            position: Character position in combined text
-            page_numbers: Map of starting positions to page numbers
-            page_texts: List of page texts
-
-        Returns:
-            Page number (1-indexed)
-        """
-        # Find the page start position that's closest but not exceeding our position
-        page_starts = sorted(page_numbers.keys())
-
-        for i in range(len(page_starts) - 1, -1, -1):
-            if page_starts[i] <= position:
-                return page_numbers[page_starts[i]]
-
-        # Default to first page if something goes wrong
-        return page_numbers[page_starts[0]] if page_starts else 673
 
     def _parse_table_fields(self, table: List[List]) -> List[RegisterField]:
         """
@@ -456,14 +402,14 @@ class PDFRegisterParser:
                     if re.match(r'^\d+(?::\d+)?\s+[A-Z]', next_line):
                         break
 
-                    # Stop if we hit a register header or table header
-                    # Note: Register headers have format "7.5.3.4Register Name(Offset"
-                    # Section references are just numbers like "2.2.6.4andSection" - don't stop for these!
-                    if (re.match(r'^\d+\.\d+\.\d+.*Register.*\(Offset', next_line) or \
+                    # Stop if we hit a register header or table header or page number
+                    if re.match(r'^\d+\.\d+\.\d+', next_line) or \
                        'BitLocation' in next_line or \
                        'Register Description' in next_line or \
                        next_line.startswith('Table ') or \
-                       next_line.startswith('Figure ')):
+                       next_line.startswith('Figure ') or \
+                       next_line.startswith('Page ') or \
+                       re.match(r'^Page \d+$', next_line):
                         break
 
                     # Check if this line ends with an attribute
