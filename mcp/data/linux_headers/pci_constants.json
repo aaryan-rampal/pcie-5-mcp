@@ -1,0 +1,2613 @@
+{
+  "source": "Linux Kernel include/uapi/linux/pci_regs.h",
+  "url": "https://raw.githubusercontent.com/torvalds/linux/master/include/uapi/linux/pci_regs.h",
+  "total_constants": 262,
+  "constants": [
+    {
+      "name": "PCI_EXP_FLAGS",
+      "value": "0x02",
+      "description": "Capabilities register",
+      "line_number": 478
+    },
+    {
+      "name": "PCI_EXP_FLAGS_VERS",
+      "value": "0x000f",
+      "description": "Capability version",
+      "line_number": 479
+    },
+    {
+      "name": "PCI_EXP_FLAGS_TYPE",
+      "value": "0x00f0",
+      "description": "Device/Port type",
+      "line_number": 480
+    },
+    {
+      "name": "PCI_EXP_TYPE_ENDPOINT",
+      "value": "0x0",
+      "description": "Express Endpoint",
+      "line_number": 481
+    },
+    {
+      "name": "PCI_EXP_TYPE_LEG_END",
+      "value": "0x1",
+      "description": "Legacy Endpoint",
+      "line_number": 482
+    },
+    {
+      "name": "PCI_EXP_TYPE_ROOT_PORT",
+      "value": "0x4",
+      "description": "Root Port",
+      "line_number": 483
+    },
+    {
+      "name": "PCI_EXP_TYPE_UPSTREAM",
+      "value": "0x5",
+      "description": "Upstream Port",
+      "line_number": 484
+    },
+    {
+      "name": "PCI_EXP_TYPE_DOWNSTREAM",
+      "value": "0x6",
+      "description": "Downstream Port",
+      "line_number": 485
+    },
+    {
+      "name": "PCI_EXP_TYPE_PCI_BRIDGE",
+      "value": "0x7",
+      "description": "PCIe to PCI/PCI-X Bridge",
+      "line_number": 486
+    },
+    {
+      "name": "PCI_EXP_TYPE_PCIE_BRIDGE",
+      "value": "0x8",
+      "description": "PCI/PCI-X to PCIe Bridge",
+      "line_number": 487
+    },
+    {
+      "name": "PCI_EXP_TYPE_RC_END",
+      "value": "0x9",
+      "description": "Root Complex Integrated Endpoint",
+      "line_number": 488
+    },
+    {
+      "name": "PCI_EXP_TYPE_RC_EC",
+      "value": "0xa",
+      "description": "Root Complex Event Collector",
+      "line_number": 489
+    },
+    {
+      "name": "PCI_EXP_FLAGS_SLOT",
+      "value": "0x0100",
+      "description": "Slot implemented",
+      "line_number": 490
+    },
+    {
+      "name": "PCI_EXP_FLAGS_IRQ",
+      "value": "0x3e00",
+      "description": "Interrupt message number",
+      "line_number": 491
+    },
+    {
+      "name": "PCI_EXP_FLAGS_FLIT",
+      "value": "0x8000",
+      "description": "Flit Mode Supported",
+      "line_number": 492
+    },
+    {
+      "name": "PCI_EXP_DEVCAP",
+      "value": "0x04",
+      "description": "Device capabilities",
+      "line_number": 493
+    },
+    {
+      "name": "PCI_EXP_DEVCAP_PAYLOAD",
+      "value": "0x00000007",
+      "description": "Max_Payload_Size",
+      "line_number": 494
+    },
+    {
+      "name": "PCI_EXP_DEVCAP_PHANTOM",
+      "value": "0x00000018",
+      "description": "Phantom functions",
+      "line_number": 495
+    },
+    {
+      "name": "PCI_EXP_DEVCAP_EXT_TAG",
+      "value": "0x00000020",
+      "description": "Extended tags",
+      "line_number": 496
+    },
+    {
+      "name": "PCI_EXP_DEVCAP_L0S",
+      "value": "0x000001c0",
+      "description": "L0s Acceptable Latency",
+      "line_number": 497
+    },
+    {
+      "name": "PCI_EXP_DEVCAP_L1",
+      "value": "0x00000e00",
+      "description": "L1 Acceptable Latency",
+      "line_number": 498
+    },
+    {
+      "name": "PCI_EXP_DEVCAP_ATN_BUT",
+      "value": "0x00001000",
+      "description": "Attention Button Present",
+      "line_number": 499
+    },
+    {
+      "name": "PCI_EXP_DEVCAP_ATN_IND",
+      "value": "0x00002000",
+      "description": "Attention Indicator Present",
+      "line_number": 500
+    },
+    {
+      "name": "PCI_EXP_DEVCAP_PWR_IND",
+      "value": "0x00004000",
+      "description": "Power Indicator Present",
+      "line_number": 501
+    },
+    {
+      "name": "PCI_EXP_DEVCAP_RBER",
+      "value": "0x00008000",
+      "description": "Role-Based Error Reporting",
+      "line_number": 502
+    },
+    {
+      "name": "PCI_EXP_DEVCAP_PWR_VAL",
+      "value": "0x03fc0000",
+      "description": "Slot Power Limit Value",
+      "line_number": 503
+    },
+    {
+      "name": "PCI_EXP_DEVCAP_PWR_SCL",
+      "value": "0x0c000000",
+      "description": "Slot Power Limit Scale",
+      "line_number": 504
+    },
+    {
+      "name": "PCI_EXP_DEVCAP_FLR",
+      "value": "0x10000000",
+      "description": "Function Level Reset",
+      "line_number": 505
+    },
+    {
+      "name": "PCI_EXP_DEVCAP_TEE",
+      "value": "0x40000000",
+      "description": "TEE I/O (TDISP) Support",
+      "line_number": 506
+    },
+    {
+      "name": "PCI_EXP_DEVCTL",
+      "value": "0x08",
+      "description": "Device Control",
+      "line_number": 507
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_CERE",
+      "value": "0x0001",
+      "description": "Correctable Error Reporting En.",
+      "line_number": 508
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_NFERE",
+      "value": "0x0002",
+      "description": "Non-Fatal Error Reporting Enable",
+      "line_number": 509
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_FERE",
+      "value": "0x0004",
+      "description": "Fatal Error Reporting Enable",
+      "line_number": 510
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_URRE",
+      "value": "0x0008",
+      "description": "Unsupported Request Reporting En.",
+      "line_number": 511
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_RELAX_EN",
+      "value": "0x0010",
+      "description": "Enable relaxed ordering",
+      "line_number": 512
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_PAYLOAD",
+      "value": "0x00e0",
+      "description": "Max_Payload_Size",
+      "line_number": 513
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_PAYLOAD_128B",
+      "value": "0x0000",
+      "description": "128 Bytes",
+      "line_number": 514
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_PAYLOAD_256B",
+      "value": "0x0020",
+      "description": "256 Bytes",
+      "line_number": 515
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_PAYLOAD_512B",
+      "value": "0x0040",
+      "description": "512 Bytes",
+      "line_number": 516
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_PAYLOAD_1024B",
+      "value": "0x0060",
+      "description": "1024 Bytes",
+      "line_number": 517
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_PAYLOAD_2048B",
+      "value": "0x0080",
+      "description": "2048 Bytes",
+      "line_number": 518
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_PAYLOAD_4096B",
+      "value": "0x00a0",
+      "description": "4096 Bytes",
+      "line_number": 519
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_EXT_TAG",
+      "value": "0x0100",
+      "description": "Extended Tag Field Enable",
+      "line_number": 520
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_PHANTOM",
+      "value": "0x0200",
+      "description": "Phantom Functions Enable",
+      "line_number": 521
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_AUX_PME",
+      "value": "0x0400",
+      "description": "Auxiliary Power PM Enable",
+      "line_number": 522
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_NOSNOOP_EN",
+      "value": "0x0800",
+      "description": "Enable No Snoop",
+      "line_number": 523
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_READRQ",
+      "value": "0x7000",
+      "description": "Max_Read_Request_Size",
+      "line_number": 524
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_READRQ_128B",
+      "value": "0x0000",
+      "description": "128 Bytes",
+      "line_number": 525
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_READRQ_256B",
+      "value": "0x1000",
+      "description": "256 Bytes",
+      "line_number": 526
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_READRQ_512B",
+      "value": "0x2000",
+      "description": "512 Bytes",
+      "line_number": 527
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_READRQ_1024B",
+      "value": "0x3000",
+      "description": "1024 Bytes",
+      "line_number": 528
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_READRQ_2048B",
+      "value": "0x4000",
+      "description": "2048 Bytes",
+      "line_number": 529
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_READRQ_4096B",
+      "value": "0x5000",
+      "description": "4096 Bytes",
+      "line_number": 530
+    },
+    {
+      "name": "PCI_EXP_DEVCTL_BCR_FLR",
+      "value": "0x8000",
+      "description": "Bridge Configuration Retry / FLR",
+      "line_number": 531
+    },
+    {
+      "name": "PCI_EXP_DEVSTA",
+      "value": "0x0a",
+      "description": "Device Status",
+      "line_number": 532
+    },
+    {
+      "name": "PCI_EXP_DEVSTA_CED",
+      "value": "0x0001",
+      "description": "Correctable Error Detected",
+      "line_number": 533
+    },
+    {
+      "name": "PCI_EXP_DEVSTA_NFED",
+      "value": "0x0002",
+      "description": "Non-Fatal Error Detected",
+      "line_number": 534
+    },
+    {
+      "name": "PCI_EXP_DEVSTA_FED",
+      "value": "0x0004",
+      "description": "Fatal Error Detected",
+      "line_number": 535
+    },
+    {
+      "name": "PCI_EXP_DEVSTA_URD",
+      "value": "0x0008",
+      "description": "Unsupported Request Detected",
+      "line_number": 536
+    },
+    {
+      "name": "PCI_EXP_DEVSTA_AUXPD",
+      "value": "0x0010",
+      "description": "AUX Power Detected",
+      "line_number": 537
+    },
+    {
+      "name": "PCI_EXP_DEVSTA_TRPND",
+      "value": "0x0020",
+      "description": "Transactions Pending",
+      "line_number": 538
+    },
+    {
+      "name": "PCI_EXP_LNKCAP",
+      "value": "0x0c",
+      "description": "Link Capabilities",
+      "line_number": 540
+    },
+    {
+      "name": "PCI_EXP_LNKCAP_SLS",
+      "value": "0x0000000f",
+      "description": "Max Link Speed (prior to PCIe r3.0: Supported Link Speeds)",
+      "line_number": 541
+    },
+    {
+      "name": "PCI_EXP_LNKCAP_SLS_2_5GB",
+      "value": "0x00000001",
+      "description": "LNKCAP2 SLS Vector bit 0",
+      "line_number": 542
+    },
+    {
+      "name": "PCI_EXP_LNKCAP_SLS_5_0GB",
+      "value": "0x00000002",
+      "description": "LNKCAP2 SLS Vector bit 1",
+      "line_number": 543
+    },
+    {
+      "name": "PCI_EXP_LNKCAP_SLS_8_0GB",
+      "value": "0x00000003",
+      "description": "LNKCAP2 SLS Vector bit 2",
+      "line_number": 544
+    },
+    {
+      "name": "PCI_EXP_LNKCAP_SLS_16_0GB",
+      "value": "0x00000004",
+      "description": "LNKCAP2 SLS Vector bit 3",
+      "line_number": 545
+    },
+    {
+      "name": "PCI_EXP_LNKCAP_SLS_32_0GB",
+      "value": "0x00000005",
+      "description": "LNKCAP2 SLS Vector bit 4",
+      "line_number": 546
+    },
+    {
+      "name": "PCI_EXP_LNKCAP_SLS_64_0GB",
+      "value": "0x00000006",
+      "description": "LNKCAP2 SLS Vector bit 5",
+      "line_number": 547
+    },
+    {
+      "name": "PCI_EXP_LNKCAP_MLW",
+      "value": "0x000003f0",
+      "description": "Maximum Link Width",
+      "line_number": 548
+    },
+    {
+      "name": "PCI_EXP_LNKCAP_ASPMS",
+      "value": "0x00000c00",
+      "description": "ASPM Support",
+      "line_number": 549
+    },
+    {
+      "name": "PCI_EXP_LNKCAP_ASPM_L0S",
+      "value": "0x00000400",
+      "description": "ASPM L0s Support",
+      "line_number": 550
+    },
+    {
+      "name": "PCI_EXP_LNKCAP_ASPM_L1",
+      "value": "0x00000800",
+      "description": "ASPM L1 Support",
+      "line_number": 551
+    },
+    {
+      "name": "PCI_EXP_LNKCAP_L0SEL",
+      "value": "0x00007000",
+      "description": "L0s Exit Latency",
+      "line_number": 552
+    },
+    {
+      "name": "PCI_EXP_LNKCAP_L1EL",
+      "value": "0x00038000",
+      "description": "L1 Exit Latency",
+      "line_number": 553
+    },
+    {
+      "name": "PCI_EXP_LNKCAP_CLKPM",
+      "value": "0x00040000",
+      "description": "Clock Power Management",
+      "line_number": 554
+    },
+    {
+      "name": "PCI_EXP_LNKCAP_SDERC",
+      "value": "0x00080000",
+      "description": "Surprise Down Error Reporting Capable",
+      "line_number": 555
+    },
+    {
+      "name": "PCI_EXP_LNKCAP_DLLLARC",
+      "value": "0x00100000",
+      "description": "Data Link Layer Link Active Reporting Capable",
+      "line_number": 556
+    },
+    {
+      "name": "PCI_EXP_LNKCAP_LBNC",
+      "value": "0x00200000",
+      "description": "Link Bandwidth Notification Capability",
+      "line_number": 557
+    },
+    {
+      "name": "PCI_EXP_LNKCAP_PN",
+      "value": "0xff000000",
+      "description": "Port Number",
+      "line_number": 558
+    },
+    {
+      "name": "PCI_EXP_LNKCTL",
+      "value": "0x10",
+      "description": "Link Control",
+      "line_number": 559
+    },
+    {
+      "name": "PCI_EXP_LNKCTL_ASPMC",
+      "value": "0x0003",
+      "description": "ASPM Control",
+      "line_number": 560
+    },
+    {
+      "name": "PCI_EXP_LNKCTL_ASPM_L0S",
+      "value": "0x0001",
+      "description": "L0s Enable",
+      "line_number": 561
+    },
+    {
+      "name": "PCI_EXP_LNKCTL_ASPM_L1",
+      "value": "0x0002",
+      "description": "L1 Enable",
+      "line_number": 562
+    },
+    {
+      "name": "PCI_EXP_LNKCTL_RCB",
+      "value": "0x0008",
+      "description": "Read Completion Boundary",
+      "line_number": 563
+    },
+    {
+      "name": "PCI_EXP_LNKCTL_LD",
+      "value": "0x0010",
+      "description": "Link Disable",
+      "line_number": 564
+    },
+    {
+      "name": "PCI_EXP_LNKCTL_RL",
+      "value": "0x0020",
+      "description": "Retrain Link",
+      "line_number": 565
+    },
+    {
+      "name": "PCI_EXP_LNKCTL_CCC",
+      "value": "0x0040",
+      "description": "Common Clock Configuration",
+      "line_number": 566
+    },
+    {
+      "name": "PCI_EXP_LNKCTL_ES",
+      "value": "0x0080",
+      "description": "Extended Synch",
+      "line_number": 567
+    },
+    {
+      "name": "PCI_EXP_LNKCTL_CLKREQ_EN",
+      "value": "0x0100",
+      "description": "Enable clkreq",
+      "line_number": 568
+    },
+    {
+      "name": "PCI_EXP_LNKCTL_HAWD",
+      "value": "0x0200",
+      "description": "Hardware Autonomous Width Disable",
+      "line_number": 569
+    },
+    {
+      "name": "PCI_EXP_LNKCTL_LBMIE",
+      "value": "0x0400",
+      "description": "Link Bandwidth Management Interrupt Enable",
+      "line_number": 570
+    },
+    {
+      "name": "PCI_EXP_LNKCTL_LABIE",
+      "value": "0x0800",
+      "description": "Link Autonomous Bandwidth Interrupt Enable",
+      "line_number": 571
+    },
+    {
+      "name": "PCI_EXP_LNKSTA",
+      "value": "0x12",
+      "description": "Link Status",
+      "line_number": 572
+    },
+    {
+      "name": "PCI_EXP_LNKSTA_CLS",
+      "value": "0x000f",
+      "description": "Current Link Speed",
+      "line_number": 573
+    },
+    {
+      "name": "PCI_EXP_LNKSTA_CLS_2_5GB",
+      "value": "0x0001",
+      "description": "Current Link Speed 2.5GT/s",
+      "line_number": 574
+    },
+    {
+      "name": "PCI_EXP_LNKSTA_CLS_5_0GB",
+      "value": "0x0002",
+      "description": "Current Link Speed 5.0GT/s",
+      "line_number": 575
+    },
+    {
+      "name": "PCI_EXP_LNKSTA_CLS_8_0GB",
+      "value": "0x0003",
+      "description": "Current Link Speed 8.0GT/s",
+      "line_number": 576
+    },
+    {
+      "name": "PCI_EXP_LNKSTA_CLS_16_0GB",
+      "value": "0x0004",
+      "description": "Current Link Speed 16.0GT/s",
+      "line_number": 577
+    },
+    {
+      "name": "PCI_EXP_LNKSTA_CLS_32_0GB",
+      "value": "0x0005",
+      "description": "Current Link Speed 32.0GT/s",
+      "line_number": 578
+    },
+    {
+      "name": "PCI_EXP_LNKSTA_CLS_64_0GB",
+      "value": "0x0006",
+      "description": "Current Link Speed 64.0GT/s",
+      "line_number": 579
+    },
+    {
+      "name": "PCI_EXP_LNKSTA_NLW",
+      "value": "0x03f0",
+      "description": "Negotiated Link Width",
+      "line_number": 580
+    },
+    {
+      "name": "PCI_EXP_LNKSTA_NLW_X1",
+      "value": "0x0010",
+      "description": "Current Link Width x1",
+      "line_number": 581
+    },
+    {
+      "name": "PCI_EXP_LNKSTA_NLW_X2",
+      "value": "0x0020",
+      "description": "Current Link Width x2",
+      "line_number": 582
+    },
+    {
+      "name": "PCI_EXP_LNKSTA_NLW_X4",
+      "value": "0x0040",
+      "description": "Current Link Width x4",
+      "line_number": 583
+    },
+    {
+      "name": "PCI_EXP_LNKSTA_NLW_X8",
+      "value": "0x0080",
+      "description": "Current Link Width x8",
+      "line_number": 584
+    },
+    {
+      "name": "PCI_EXP_LNKSTA_NLW_SHIFT",
+      "value": "4",
+      "description": "start of NLW mask in link status",
+      "line_number": 585
+    },
+    {
+      "name": "PCI_EXP_LNKSTA_LT",
+      "value": "0x0800",
+      "description": "Link Training",
+      "line_number": 586
+    },
+    {
+      "name": "PCI_EXP_LNKSTA_SLC",
+      "value": "0x1000",
+      "description": "Slot Clock Configuration",
+      "line_number": 587
+    },
+    {
+      "name": "PCI_EXP_LNKSTA_DLLLA",
+      "value": "0x2000",
+      "description": "Data Link Layer Link Active",
+      "line_number": 588
+    },
+    {
+      "name": "PCI_EXP_LNKSTA_LBMS",
+      "value": "0x4000",
+      "description": "Link Bandwidth Management Status",
+      "line_number": 589
+    },
+    {
+      "name": "PCI_EXP_LNKSTA_LABS",
+      "value": "0x8000",
+      "description": "Link Autonomous Bandwidth Status",
+      "line_number": 590
+    },
+    {
+      "name": "PCI_EXP_SLTCAP",
+      "value": "0x14",
+      "description": "Slot Capabilities",
+      "line_number": 592
+    },
+    {
+      "name": "PCI_EXP_SLTCAP_ABP",
+      "value": "0x00000001",
+      "description": "Attention Button Present",
+      "line_number": 593
+    },
+    {
+      "name": "PCI_EXP_SLTCAP_PCP",
+      "value": "0x00000002",
+      "description": "Power Controller Present",
+      "line_number": 594
+    },
+    {
+      "name": "PCI_EXP_SLTCAP_MRLSP",
+      "value": "0x00000004",
+      "description": "MRL Sensor Present",
+      "line_number": 595
+    },
+    {
+      "name": "PCI_EXP_SLTCAP_AIP",
+      "value": "0x00000008",
+      "description": "Attention Indicator Present",
+      "line_number": 596
+    },
+    {
+      "name": "PCI_EXP_SLTCAP_PIP",
+      "value": "0x00000010",
+      "description": "Power Indicator Present",
+      "line_number": 597
+    },
+    {
+      "name": "PCI_EXP_SLTCAP_HPS",
+      "value": "0x00000020",
+      "description": "Hot-Plug Surprise",
+      "line_number": 598
+    },
+    {
+      "name": "PCI_EXP_SLTCAP_HPC",
+      "value": "0x00000040",
+      "description": "Hot-Plug Capable",
+      "line_number": 599
+    },
+    {
+      "name": "PCI_EXP_SLTCAP_SPLV",
+      "value": "0x00007f80",
+      "description": "Slot Power Limit Value",
+      "line_number": 600
+    },
+    {
+      "name": "PCI_EXP_SLTCAP_SPLS",
+      "value": "0x00018000",
+      "description": "Slot Power Limit Scale",
+      "line_number": 601
+    },
+    {
+      "name": "PCI_EXP_SLTCAP_EIP",
+      "value": "0x00020000",
+      "description": "Electromechanical Interlock Present",
+      "line_number": 602
+    },
+    {
+      "name": "PCI_EXP_SLTCAP_NCCS",
+      "value": "0x00040000",
+      "description": "No Command Completed Support",
+      "line_number": 603
+    },
+    {
+      "name": "PCI_EXP_SLTCAP_PSN",
+      "value": "0xfff80000",
+      "description": "Physical Slot Number",
+      "line_number": 604
+    },
+    {
+      "name": "PCI_EXP_SLTCTL",
+      "value": "0x18",
+      "description": "Slot Control",
+      "line_number": 605
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_ABPE",
+      "value": "0x0001",
+      "description": "Attention Button Pressed Enable",
+      "line_number": 606
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_PFDE",
+      "value": "0x0002",
+      "description": "Power Fault Detected Enable",
+      "line_number": 607
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_MRLSCE",
+      "value": "0x0004",
+      "description": "MRL Sensor Changed Enable",
+      "line_number": 608
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_PDCE",
+      "value": "0x0008",
+      "description": "Presence Detect Changed Enable",
+      "line_number": 609
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_CCIE",
+      "value": "0x0010",
+      "description": "Command Completed Interrupt Enable",
+      "line_number": 610
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_HPIE",
+      "value": "0x0020",
+      "description": "Hot-Plug Interrupt Enable",
+      "line_number": 611
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_AIC",
+      "value": "0x00c0",
+      "description": "Attention Indicator Control",
+      "line_number": 612
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_ATTN_IND_SHIFT",
+      "value": "6",
+      "description": "Attention Indicator shift",
+      "line_number": 613
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_ATTN_IND_ON",
+      "value": "0x0040",
+      "description": "Attention Indicator on",
+      "line_number": 614
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_ATTN_IND_BLINK",
+      "value": "0x0080",
+      "description": "Attention Indicator blinking",
+      "line_number": 615
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_ATTN_IND_OFF",
+      "value": "0x00c0",
+      "description": "Attention Indicator off",
+      "line_number": 616
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_PIC",
+      "value": "0x0300",
+      "description": "Power Indicator Control",
+      "line_number": 617
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_PWR_IND_ON",
+      "value": "0x0100",
+      "description": "Power Indicator on",
+      "line_number": 618
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_PWR_IND_BLINK",
+      "value": "0x0200",
+      "description": "Power Indicator blinking",
+      "line_number": 619
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_PWR_IND_OFF",
+      "value": "0x0300",
+      "description": "Power Indicator off",
+      "line_number": 620
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_PCC",
+      "value": "0x0400",
+      "description": "Power Controller Control",
+      "line_number": 621
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_PWR_ON",
+      "value": "0x0000",
+      "description": "Power On",
+      "line_number": 622
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_PWR_OFF",
+      "value": "0x0400",
+      "description": "Power Off",
+      "line_number": 623
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_EIC",
+      "value": "0x0800",
+      "description": "Electromechanical Interlock Control",
+      "line_number": 624
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_DLLSCE",
+      "value": "0x1000",
+      "description": "Data Link Layer State Changed Enable",
+      "line_number": 625
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_ASPL_DISABLE",
+      "value": "0x2000",
+      "description": "Auto Slot Power Limit Disable",
+      "line_number": 626
+    },
+    {
+      "name": "PCI_EXP_SLTCTL_IBPD_DISABLE",
+      "value": "0x4000",
+      "description": "In-band PD disable",
+      "line_number": 627
+    },
+    {
+      "name": "PCI_EXP_SLTSTA",
+      "value": "0x1a",
+      "description": "Slot Status",
+      "line_number": 628
+    },
+    {
+      "name": "PCI_EXP_SLTSTA_ABP",
+      "value": "0x0001",
+      "description": "Attention Button Pressed",
+      "line_number": 629
+    },
+    {
+      "name": "PCI_EXP_SLTSTA_PFD",
+      "value": "0x0002",
+      "description": "Power Fault Detected",
+      "line_number": 630
+    },
+    {
+      "name": "PCI_EXP_SLTSTA_MRLSC",
+      "value": "0x0004",
+      "description": "MRL Sensor Changed",
+      "line_number": 631
+    },
+    {
+      "name": "PCI_EXP_SLTSTA_PDC",
+      "value": "0x0008",
+      "description": "Presence Detect Changed",
+      "line_number": 632
+    },
+    {
+      "name": "PCI_EXP_SLTSTA_CC",
+      "value": "0x0010",
+      "description": "Command Completed",
+      "line_number": 633
+    },
+    {
+      "name": "PCI_EXP_SLTSTA_MRLSS",
+      "value": "0x0020",
+      "description": "MRL Sensor State",
+      "line_number": 634
+    },
+    {
+      "name": "PCI_EXP_SLTSTA_PDS",
+      "value": "0x0040",
+      "description": "Presence Detect State",
+      "line_number": 635
+    },
+    {
+      "name": "PCI_EXP_SLTSTA_EIS",
+      "value": "0x0080",
+      "description": "Electromechanical Interlock Status",
+      "line_number": 636
+    },
+    {
+      "name": "PCI_EXP_SLTSTA_DLLSC",
+      "value": "0x0100",
+      "description": "Data Link Layer State Changed",
+      "line_number": 637
+    },
+    {
+      "name": "PCI_EXP_RTCTL",
+      "value": "0x1c",
+      "description": "Root Control",
+      "line_number": 638
+    },
+    {
+      "name": "PCI_EXP_RTCTL_SECEE",
+      "value": "0x0001",
+      "description": "System Error on Correctable Error",
+      "line_number": 639
+    },
+    {
+      "name": "PCI_EXP_RTCTL_SENFEE",
+      "value": "0x0002",
+      "description": "System Error on Non-Fatal Error",
+      "line_number": 640
+    },
+    {
+      "name": "PCI_EXP_RTCTL_SEFEE",
+      "value": "0x0004",
+      "description": "System Error on Fatal Error",
+      "line_number": 641
+    },
+    {
+      "name": "PCI_EXP_RTCTL_PMEIE",
+      "value": "0x0008",
+      "description": "PME Interrupt Enable",
+      "line_number": 642
+    },
+    {
+      "name": "PCI_EXP_RTCTL_RRS_SVE",
+      "value": "0x0010",
+      "description": "Config RRS Software Visibility Enable",
+      "line_number": 643
+    },
+    {
+      "name": "PCI_EXP_RTCTL_CRSSVE",
+      "value": "PCI_EXP_RTCTL_RRS_SVE",
+      "description": "compatibility",
+      "line_number": 644
+    },
+    {
+      "name": "PCI_EXP_RTCAP",
+      "value": "0x1e",
+      "description": "Root Capabilities",
+      "line_number": 645
+    },
+    {
+      "name": "PCI_EXP_RTCAP_RRS_SV",
+      "value": "0x0001",
+      "description": "Config RRS Software Visibility",
+      "line_number": 646
+    },
+    {
+      "name": "PCI_EXP_RTCAP_CRSVIS",
+      "value": "PCI_EXP_RTCAP_RRS_SV",
+      "description": "compatibility",
+      "line_number": 647
+    },
+    {
+      "name": "PCI_EXP_RTSTA",
+      "value": "0x20",
+      "description": "Root Status",
+      "line_number": 648
+    },
+    {
+      "name": "PCI_EXP_RTSTA_PME_RQ_ID",
+      "value": "0x0000ffff",
+      "description": "PME Requester ID",
+      "line_number": 649
+    },
+    {
+      "name": "PCI_EXP_RTSTA_PME",
+      "value": "0x00010000",
+      "description": "PME status",
+      "line_number": 650
+    },
+    {
+      "name": "PCI_EXP_RTSTA_PENDING",
+      "value": "0x00020000",
+      "description": "PME pending",
+      "line_number": 651
+    },
+    {
+      "name": "PCI_EXP_DEVCAP2",
+      "value": "0x24",
+      "description": "Device Capabilities 2",
+      "line_number": 660
+    },
+    {
+      "name": "PCI_EXP_DEVCAP2_COMP_TMOUT_DIS",
+      "value": "0x00000010",
+      "description": "Completion Timeout Disable supported",
+      "line_number": 661
+    },
+    {
+      "name": "PCI_EXP_DEVCAP2_ARI",
+      "value": "0x00000020",
+      "description": "Alternative Routing-ID",
+      "line_number": 662
+    },
+    {
+      "name": "PCI_EXP_DEVCAP2_ATOMIC_ROUTE",
+      "value": "0x00000040",
+      "description": "Atomic Op routing",
+      "line_number": 663
+    },
+    {
+      "name": "PCI_EXP_DEVCAP2_ATOMIC_COMP32",
+      "value": "0x00000080",
+      "description": "32b AtomicOp completion",
+      "line_number": 664
+    },
+    {
+      "name": "PCI_EXP_DEVCAP2_ATOMIC_COMP64",
+      "value": "0x00000100",
+      "description": "64b AtomicOp completion",
+      "line_number": 665
+    },
+    {
+      "name": "PCI_EXP_DEVCAP2_ATOMIC_COMP128",
+      "value": "0x00000200",
+      "description": "128b AtomicOp completion",
+      "line_number": 666
+    },
+    {
+      "name": "PCI_EXP_DEVCAP2_LTR",
+      "value": "0x00000800",
+      "description": "Latency tolerance reporting",
+      "line_number": 667
+    },
+    {
+      "name": "PCI_EXP_DEVCAP2_TPH_COMP_MASK",
+      "value": "0x00003000",
+      "description": "TPH completer support",
+      "line_number": 668
+    },
+    {
+      "name": "PCI_EXP_DEVCAP2_OBFF_MASK",
+      "value": "0x000c0000",
+      "description": "OBFF support mechanism",
+      "line_number": 669
+    },
+    {
+      "name": "PCI_EXP_DEVCAP2_OBFF_MSG",
+      "value": "0x00040000",
+      "description": "New message signaling",
+      "line_number": 670
+    },
+    {
+      "name": "PCI_EXP_DEVCAP2_OBFF_WAKE",
+      "value": "0x00080000",
+      "description": "Re-use WAKE# for OBFF",
+      "line_number": 671
+    },
+    {
+      "name": "PCI_EXP_DEVCAP2_EE_PREFIX",
+      "value": "0x00200000",
+      "description": "End-End TLP Prefix",
+      "line_number": 672
+    },
+    {
+      "name": "PCI_EXP_DEVCAP2_EE_PREFIX_MAX",
+      "value": "0x00c00000",
+      "description": "Max End-End TLP Prefixes",
+      "line_number": 673
+    },
+    {
+      "name": "PCI_EXP_DEVCTL2",
+      "value": "0x28",
+      "description": "Device Control 2",
+      "line_number": 674
+    },
+    {
+      "name": "PCI_EXP_DEVCTL2_COMP_TIMEOUT",
+      "value": "0x000f",
+      "description": "Completion Timeout Value",
+      "line_number": 675
+    },
+    {
+      "name": "PCI_EXP_DEVCTL2_COMP_TMOUT_DIS",
+      "value": "0x0010",
+      "description": "Completion Timeout Disable",
+      "line_number": 676
+    },
+    {
+      "name": "PCI_EXP_DEVCTL2_ARI",
+      "value": "0x0020",
+      "description": "Alternative Routing-ID",
+      "line_number": 677
+    },
+    {
+      "name": "PCI_EXP_DEVCTL2_ATOMIC_REQ",
+      "value": "0x0040",
+      "description": "Set Atomic requests",
+      "line_number": 678
+    },
+    {
+      "name": "PCI_EXP_DEVCTL2_ATOMIC_EGRESS_BLOCK",
+      "value": "0x0080",
+      "description": "Block atomic egress",
+      "line_number": 679
+    },
+    {
+      "name": "PCI_EXP_DEVCTL2_IDO_REQ_EN",
+      "value": "0x0100",
+      "description": "Allow IDO for requests",
+      "line_number": 680
+    },
+    {
+      "name": "PCI_EXP_DEVCTL2_IDO_CMP_EN",
+      "value": "0x0200",
+      "description": "Allow IDO for completions",
+      "line_number": 681
+    },
+    {
+      "name": "PCI_EXP_DEVCTL2_LTR_EN",
+      "value": "0x0400",
+      "description": "Enable LTR mechanism",
+      "line_number": 682
+    },
+    {
+      "name": "PCI_EXP_DEVCTL2_OBFF_MSGA_EN",
+      "value": "0x2000",
+      "description": "Enable OBFF Message type A",
+      "line_number": 683
+    },
+    {
+      "name": "PCI_EXP_DEVCTL2_OBFF_MSGB_EN",
+      "value": "0x4000",
+      "description": "Enable OBFF Message type B",
+      "line_number": 684
+    },
+    {
+      "name": "PCI_EXP_DEVCTL2_OBFF_WAKE_EN",
+      "value": "0x6000",
+      "description": "OBFF using WAKE# signaling",
+      "line_number": 685
+    },
+    {
+      "name": "PCI_EXP_DEVSTA2",
+      "value": "0x2a",
+      "description": "Device Status 2",
+      "line_number": 686
+    },
+    {
+      "name": "PCI_EXP_LNKCAP2",
+      "value": "0x2c",
+      "description": "Link Capabilities 2",
+      "line_number": 688
+    },
+    {
+      "name": "PCI_EXP_LNKCAP2_SLS",
+      "value": "0x000000fe",
+      "description": "Supported Link Speeds Vector",
+      "line_number": 689
+    },
+    {
+      "name": "PCI_EXP_LNKCAP2_SLS_2_5GB",
+      "value": "0x00000002",
+      "description": "Supported Speed 2.5GT/s",
+      "line_number": 690
+    },
+    {
+      "name": "PCI_EXP_LNKCAP2_SLS_5_0GB",
+      "value": "0x00000004",
+      "description": "Supported Speed 5GT/s",
+      "line_number": 691
+    },
+    {
+      "name": "PCI_EXP_LNKCAP2_SLS_8_0GB",
+      "value": "0x00000008",
+      "description": "Supported Speed 8GT/s",
+      "line_number": 692
+    },
+    {
+      "name": "PCI_EXP_LNKCAP2_SLS_16_0GB",
+      "value": "0x00000010",
+      "description": "Supported Speed 16GT/s",
+      "line_number": 693
+    },
+    {
+      "name": "PCI_EXP_LNKCAP2_SLS_32_0GB",
+      "value": "0x00000020",
+      "description": "Supported Speed 32GT/s",
+      "line_number": 694
+    },
+    {
+      "name": "PCI_EXP_LNKCAP2_SLS_64_0GB",
+      "value": "0x00000040",
+      "description": "Supported Speed 64GT/s",
+      "line_number": 695
+    },
+    {
+      "name": "PCI_EXP_LNKCAP2_CROSSLINK",
+      "value": "0x00000100",
+      "description": "Crosslink supported",
+      "line_number": 696
+    },
+    {
+      "name": "PCI_EXP_LNKCTL2",
+      "value": "0x30",
+      "description": "Link Control 2",
+      "line_number": 697
+    },
+    {
+      "name": "PCI_EXP_LNKCTL2_TLS",
+      "value": "0x000f",
+      "description": "",
+      "line_number": 698
+    },
+    {
+      "name": "PCI_EXP_LNKCTL2_TLS_2_5GT",
+      "value": "0x0001",
+      "description": "Supported Speed 2.5GT/s",
+      "line_number": 699
+    },
+    {
+      "name": "PCI_EXP_LNKCTL2_TLS_5_0GT",
+      "value": "0x0002",
+      "description": "Supported Speed 5GT/s",
+      "line_number": 700
+    },
+    {
+      "name": "PCI_EXP_LNKCTL2_TLS_8_0GT",
+      "value": "0x0003",
+      "description": "Supported Speed 8GT/s",
+      "line_number": 701
+    },
+    {
+      "name": "PCI_EXP_LNKCTL2_TLS_16_0GT",
+      "value": "0x0004",
+      "description": "Supported Speed 16GT/s",
+      "line_number": 702
+    },
+    {
+      "name": "PCI_EXP_LNKCTL2_TLS_32_0GT",
+      "value": "0x0005",
+      "description": "Supported Speed 32GT/s",
+      "line_number": 703
+    },
+    {
+      "name": "PCI_EXP_LNKCTL2_TLS_64_0GT",
+      "value": "0x0006",
+      "description": "Supported Speed 64GT/s",
+      "line_number": 704
+    },
+    {
+      "name": "PCI_EXP_LNKCTL2_ENTER_COMP",
+      "value": "0x0010",
+      "description": "Enter Compliance",
+      "line_number": 705
+    },
+    {
+      "name": "PCI_EXP_LNKCTL2_TX_MARGIN",
+      "value": "0x0380",
+      "description": "Transmit Margin",
+      "line_number": 706
+    },
+    {
+      "name": "PCI_EXP_LNKCTL2_HASD",
+      "value": "0x0020",
+      "description": "HW Autonomous Speed Disable",
+      "line_number": 707
+    },
+    {
+      "name": "PCI_EXP_LNKSTA2",
+      "value": "0x32",
+      "description": "Link Status 2",
+      "line_number": 708
+    },
+    {
+      "name": "PCI_EXP_LNKSTA2_FLIT",
+      "value": "0x0400",
+      "description": "Flit Mode Status",
+      "line_number": 709
+    },
+    {
+      "name": "PCI_EXP_SLTCAP2",
+      "value": "0x34",
+      "description": "Slot Capabilities 2",
+      "line_number": 711
+    },
+    {
+      "name": "PCI_EXP_SLTCAP2_IBPD",
+      "value": "0x00000001",
+      "description": "In-band PD Disable Supported",
+      "line_number": 712
+    },
+    {
+      "name": "PCI_EXP_SLTCTL2",
+      "value": "0x38",
+      "description": "Slot Control 2",
+      "line_number": 713
+    },
+    {
+      "name": "PCI_EXP_SLTSTA2",
+      "value": "0x3a",
+      "description": "Slot Status 2",
+      "line_number": 714
+    },
+    {
+      "name": "PCI_EXP_DEVCAP2_TPH_COMP_NONE",
+      "value": "0x0",
+      "description": "None",
+      "line_number": 1048
+    },
+    {
+      "name": "PCI_EXP_DEVCAP2_TPH_COMP_TPH_ONLY",
+      "value": "0x1",
+      "description": "TPH only",
+      "line_number": 1049
+    },
+    {
+      "name": "PCI_EXP_DEVCAP2_TPH_COMP_EXT_TPH",
+      "value": "0x3",
+      "description": "TPH and Extended TPH",
+      "line_number": 1050
+    },
+    {
+      "name": "PCI_EXP_DPC_CAP",
+      "value": "0x04",
+      "description": "DPC Capability",
+      "line_number": 1077
+    },
+    {
+      "name": "PCI_EXP_DPC_IRQ",
+      "value": "0x001F",
+      "description": "Interrupt Message Number",
+      "line_number": 1078
+    },
+    {
+      "name": "PCI_EXP_DPC_CAP_RP_EXT",
+      "value": "0x0020",
+      "description": "Root Port Extensions",
+      "line_number": 1079
+    },
+    {
+      "name": "PCI_EXP_DPC_CAP_POISONED_TLP",
+      "value": "0x0040",
+      "description": "Poisoned TLP Egress Blocking Supported",
+      "line_number": 1080
+    },
+    {
+      "name": "PCI_EXP_DPC_CAP_SW_TRIGGER",
+      "value": "0x0080",
+      "description": "Software Triggering Supported",
+      "line_number": 1081
+    },
+    {
+      "name": "PCI_EXP_DPC_RP_PIO_LOG_SIZE",
+      "value": "0x0F00",
+      "description": "RP PIO Log Size [3:0]",
+      "line_number": 1082
+    },
+    {
+      "name": "PCI_EXP_DPC_CAP_DL_ACTIVE",
+      "value": "0x1000",
+      "description": "ERR_COR signal on DL_Active supported",
+      "line_number": 1083
+    },
+    {
+      "name": "PCI_EXP_DPC_RP_PIO_LOG_SIZE4",
+      "value": "0x2000",
+      "description": "RP PIO Log Size [4]",
+      "line_number": 1084
+    },
+    {
+      "name": "PCI_EXP_DPC_CTL",
+      "value": "0x06",
+      "description": "DPC control",
+      "line_number": 1086
+    },
+    {
+      "name": "PCI_EXP_DPC_CTL_EN_FATAL",
+      "value": "0x0001",
+      "description": "Enable trigger on ERR_FATAL message",
+      "line_number": 1087
+    },
+    {
+      "name": "PCI_EXP_DPC_CTL_EN_NONFATAL",
+      "value": "0x0002",
+      "description": "Enable trigger on ERR_NONFATAL message",
+      "line_number": 1088
+    },
+    {
+      "name": "PCI_EXP_DPC_CTL_INT_EN",
+      "value": "0x0008",
+      "description": "DPC Interrupt Enable",
+      "line_number": 1089
+    },
+    {
+      "name": "PCI_EXP_DPC_STATUS",
+      "value": "0x08",
+      "description": "DPC Status",
+      "line_number": 1091
+    },
+    {
+      "name": "PCI_EXP_DPC_STATUS_TRIGGER",
+      "value": "0x0001",
+      "description": "Trigger Status",
+      "line_number": 1092
+    },
+    {
+      "name": "PCI_EXP_DPC_STATUS_TRIGGER_RSN",
+      "value": "0x0006",
+      "description": "Trigger Reason",
+      "line_number": 1093
+    },
+    {
+      "name": "PCI_EXP_DPC_STATUS_TRIGGER_RSN_UNCOR",
+      "value": "0x0000",
+      "description": "Uncorrectable error",
+      "line_number": 1094
+    },
+    {
+      "name": "PCI_EXP_DPC_STATUS_TRIGGER_RSN_NFE",
+      "value": "0x0002",
+      "description": "Rcvd ERR_NONFATAL",
+      "line_number": 1095
+    },
+    {
+      "name": "PCI_EXP_DPC_STATUS_TRIGGER_RSN_FE",
+      "value": "0x0004",
+      "description": "Rcvd ERR_FATAL",
+      "line_number": 1096
+    },
+    {
+      "name": "PCI_EXP_DPC_STATUS_TRIGGER_RSN_IN_EXT",
+      "value": "0x0006",
+      "description": "Reason in Trig Reason Extension field",
+      "line_number": 1097
+    },
+    {
+      "name": "PCI_EXP_DPC_STATUS_INTERRUPT",
+      "value": "0x0008",
+      "description": "Interrupt Status",
+      "line_number": 1098
+    },
+    {
+      "name": "PCI_EXP_DPC_RP_BUSY",
+      "value": "0x0010",
+      "description": "Root Port Busy",
+      "line_number": 1099
+    },
+    {
+      "name": "PCI_EXP_DPC_STATUS_TRIGGER_RSN_EXT",
+      "value": "0x0060",
+      "description": "Trig Reason Extension",
+      "line_number": 1100
+    },
+    {
+      "name": "PCI_EXP_DPC_STATUS_TRIGGER_RSN_RP_PIO",
+      "value": "0x0000",
+      "description": "RP PIO error",
+      "line_number": 1101
+    },
+    {
+      "name": "PCI_EXP_DPC_STATUS_TRIGGER_RSN_SW_TRIGGER",
+      "value": "0x0020",
+      "description": "DPC SW Trigger bit",
+      "line_number": 1102
+    },
+    {
+      "name": "PCI_EXP_DPC_RP_PIO_FEP",
+      "value": "0x1f00",
+      "description": "RP PIO First Err Ptr",
+      "line_number": 1103
+    },
+    {
+      "name": "PCI_EXP_DPC_SOURCE_ID",
+      "value": "0x0A",
+      "description": "DPC Source Identifier",
+      "line_number": 1105
+    },
+    {
+      "name": "PCI_EXP_DPC_RP_PIO_STATUS",
+      "value": "0x0C",
+      "description": "RP PIO Status",
+      "line_number": 1107
+    },
+    {
+      "name": "PCI_EXP_DPC_RP_PIO_MASK",
+      "value": "0x10",
+      "description": "RP PIO Mask",
+      "line_number": 1108
+    },
+    {
+      "name": "PCI_EXP_DPC_RP_PIO_SEVERITY",
+      "value": "0x14",
+      "description": "RP PIO Severity",
+      "line_number": 1109
+    },
+    {
+      "name": "PCI_EXP_DPC_RP_PIO_SYSERROR",
+      "value": "0x18",
+      "description": "RP PIO SysError",
+      "line_number": 1110
+    },
+    {
+      "name": "PCI_EXP_DPC_RP_PIO_EXCEPTION",
+      "value": "0x1C",
+      "description": "RP PIO Exception",
+      "line_number": 1111
+    },
+    {
+      "name": "PCI_EXP_DPC_RP_PIO_HEADER_LOG",
+      "value": "0x20",
+      "description": "RP PIO Header Log",
+      "line_number": 1112
+    },
+    {
+      "name": "PCI_EXP_DPC_RP_PIO_IMPSPEC_LOG",
+      "value": "0x30",
+      "description": "RP PIO ImpSpec Log",
+      "line_number": 1113
+    },
+    {
+      "name": "PCI_EXP_DPC_RP_PIO_TLPPREFIX_LOG",
+      "value": "0x34",
+      "description": "RP PIO TLP Prefix Log",
+      "line_number": 1114
+    }
+  ],
+  "register_offsets": {
+    "PCI_EXP_FLAGS": {
+      "name": "PCI_EXP_FLAGS",
+      "value": "0x02",
+      "description": "Capabilities register",
+      "line_number": 478
+    },
+    "PCI_EXP_FLAGS_VERS": {
+      "name": "PCI_EXP_FLAGS_VERS",
+      "value": "0x000f",
+      "description": "Capability version",
+      "line_number": 479
+    },
+    "PCI_EXP_FLAGS_TYPE": {
+      "name": "PCI_EXP_FLAGS_TYPE",
+      "value": "0x00f0",
+      "description": "Device/Port type",
+      "line_number": 480
+    },
+    "PCI_EXP_TYPE_ENDPOINT": {
+      "name": "PCI_EXP_TYPE_ENDPOINT",
+      "value": "0x0",
+      "description": "Express Endpoint",
+      "line_number": 481
+    },
+    "PCI_EXP_TYPE_LEG_END": {
+      "name": "PCI_EXP_TYPE_LEG_END",
+      "value": "0x1",
+      "description": "Legacy Endpoint",
+      "line_number": 482
+    },
+    "PCI_EXP_TYPE_ROOT_PORT": {
+      "name": "PCI_EXP_TYPE_ROOT_PORT",
+      "value": "0x4",
+      "description": "Root Port",
+      "line_number": 483
+    },
+    "PCI_EXP_TYPE_UPSTREAM": {
+      "name": "PCI_EXP_TYPE_UPSTREAM",
+      "value": "0x5",
+      "description": "Upstream Port",
+      "line_number": 484
+    },
+    "PCI_EXP_TYPE_DOWNSTREAM": {
+      "name": "PCI_EXP_TYPE_DOWNSTREAM",
+      "value": "0x6",
+      "description": "Downstream Port",
+      "line_number": 485
+    },
+    "PCI_EXP_TYPE_PCI_BRIDGE": {
+      "name": "PCI_EXP_TYPE_PCI_BRIDGE",
+      "value": "0x7",
+      "description": "PCIe to PCI/PCI-X Bridge",
+      "line_number": 486
+    },
+    "PCI_EXP_TYPE_PCIE_BRIDGE": {
+      "name": "PCI_EXP_TYPE_PCIE_BRIDGE",
+      "value": "0x8",
+      "description": "PCI/PCI-X to PCIe Bridge",
+      "line_number": 487
+    },
+    "PCI_EXP_TYPE_RC_END": {
+      "name": "PCI_EXP_TYPE_RC_END",
+      "value": "0x9",
+      "description": "Root Complex Integrated Endpoint",
+      "line_number": 488
+    },
+    "PCI_EXP_TYPE_RC_EC": {
+      "name": "PCI_EXP_TYPE_RC_EC",
+      "value": "0xa",
+      "description": "Root Complex Event Collector",
+      "line_number": 489
+    },
+    "PCI_EXP_DEVCAP": {
+      "name": "PCI_EXP_DEVCAP",
+      "value": "0x04",
+      "description": "Device capabilities",
+      "line_number": 493
+    },
+    "PCI_EXP_DEVCAP_PAYLOAD": {
+      "name": "PCI_EXP_DEVCAP_PAYLOAD",
+      "value": "0x00000007",
+      "description": "Max_Payload_Size",
+      "line_number": 494
+    },
+    "PCI_EXP_DEVCAP_PHANTOM": {
+      "name": "PCI_EXP_DEVCAP_PHANTOM",
+      "value": "0x00000018",
+      "description": "Phantom functions",
+      "line_number": 495
+    },
+    "PCI_EXP_DEVCAP_EXT_TAG": {
+      "name": "PCI_EXP_DEVCAP_EXT_TAG",
+      "value": "0x00000020",
+      "description": "Extended tags",
+      "line_number": 496
+    },
+    "PCI_EXP_DEVCTL": {
+      "name": "PCI_EXP_DEVCTL",
+      "value": "0x08",
+      "description": "Device Control",
+      "line_number": 507
+    },
+    "PCI_EXP_DEVCTL_CERE": {
+      "name": "PCI_EXP_DEVCTL_CERE",
+      "value": "0x0001",
+      "description": "Correctable Error Reporting En.",
+      "line_number": 508
+    },
+    "PCI_EXP_DEVCTL_NFERE": {
+      "name": "PCI_EXP_DEVCTL_NFERE",
+      "value": "0x0002",
+      "description": "Non-Fatal Error Reporting Enable",
+      "line_number": 509
+    },
+    "PCI_EXP_DEVCTL_FERE": {
+      "name": "PCI_EXP_DEVCTL_FERE",
+      "value": "0x0004",
+      "description": "Fatal Error Reporting Enable",
+      "line_number": 510
+    },
+    "PCI_EXP_DEVCTL_URRE": {
+      "name": "PCI_EXP_DEVCTL_URRE",
+      "value": "0x0008",
+      "description": "Unsupported Request Reporting En.",
+      "line_number": 511
+    },
+    "PCI_EXP_DEVCTL_RELAX_EN": {
+      "name": "PCI_EXP_DEVCTL_RELAX_EN",
+      "value": "0x0010",
+      "description": "Enable relaxed ordering",
+      "line_number": 512
+    },
+    "PCI_EXP_DEVCTL_PAYLOAD": {
+      "name": "PCI_EXP_DEVCTL_PAYLOAD",
+      "value": "0x00e0",
+      "description": "Max_Payload_Size",
+      "line_number": 513
+    },
+    "PCI_EXP_DEVCTL_PAYLOAD_128B": {
+      "name": "PCI_EXP_DEVCTL_PAYLOAD_128B",
+      "value": "0x0000",
+      "description": "128 Bytes",
+      "line_number": 514
+    },
+    "PCI_EXP_DEVCTL_PAYLOAD_256B": {
+      "name": "PCI_EXP_DEVCTL_PAYLOAD_256B",
+      "value": "0x0020",
+      "description": "256 Bytes",
+      "line_number": 515
+    },
+    "PCI_EXP_DEVCTL_PAYLOAD_512B": {
+      "name": "PCI_EXP_DEVCTL_PAYLOAD_512B",
+      "value": "0x0040",
+      "description": "512 Bytes",
+      "line_number": 516
+    },
+    "PCI_EXP_DEVCTL_PAYLOAD_1024B": {
+      "name": "PCI_EXP_DEVCTL_PAYLOAD_1024B",
+      "value": "0x0060",
+      "description": "1024 Bytes",
+      "line_number": 517
+    },
+    "PCI_EXP_DEVCTL_PAYLOAD_2048B": {
+      "name": "PCI_EXP_DEVCTL_PAYLOAD_2048B",
+      "value": "0x0080",
+      "description": "2048 Bytes",
+      "line_number": 518
+    },
+    "PCI_EXP_DEVCTL_PAYLOAD_4096B": {
+      "name": "PCI_EXP_DEVCTL_PAYLOAD_4096B",
+      "value": "0x00a0",
+      "description": "4096 Bytes",
+      "line_number": 519
+    },
+    "PCI_EXP_DEVCTL_READRQ_128B": {
+      "name": "PCI_EXP_DEVCTL_READRQ_128B",
+      "value": "0x0000",
+      "description": "128 Bytes",
+      "line_number": 525
+    },
+    "PCI_EXP_DEVSTA": {
+      "name": "PCI_EXP_DEVSTA",
+      "value": "0x0a",
+      "description": "Device Status",
+      "line_number": 532
+    },
+    "PCI_EXP_DEVSTA_CED": {
+      "name": "PCI_EXP_DEVSTA_CED",
+      "value": "0x0001",
+      "description": "Correctable Error Detected",
+      "line_number": 533
+    },
+    "PCI_EXP_DEVSTA_NFED": {
+      "name": "PCI_EXP_DEVSTA_NFED",
+      "value": "0x0002",
+      "description": "Non-Fatal Error Detected",
+      "line_number": 534
+    },
+    "PCI_EXP_DEVSTA_FED": {
+      "name": "PCI_EXP_DEVSTA_FED",
+      "value": "0x0004",
+      "description": "Fatal Error Detected",
+      "line_number": 535
+    },
+    "PCI_EXP_DEVSTA_URD": {
+      "name": "PCI_EXP_DEVSTA_URD",
+      "value": "0x0008",
+      "description": "Unsupported Request Detected",
+      "line_number": 536
+    },
+    "PCI_EXP_DEVSTA_AUXPD": {
+      "name": "PCI_EXP_DEVSTA_AUXPD",
+      "value": "0x0010",
+      "description": "AUX Power Detected",
+      "line_number": 537
+    },
+    "PCI_EXP_DEVSTA_TRPND": {
+      "name": "PCI_EXP_DEVSTA_TRPND",
+      "value": "0x0020",
+      "description": "Transactions Pending",
+      "line_number": 538
+    },
+    "PCI_EXP_LNKCAP": {
+      "name": "PCI_EXP_LNKCAP",
+      "value": "0x0c",
+      "description": "Link Capabilities",
+      "line_number": 540
+    },
+    "PCI_EXP_LNKCAP_SLS": {
+      "name": "PCI_EXP_LNKCAP_SLS",
+      "value": "0x0000000f",
+      "description": "Max Link Speed (prior to PCIe r3.0: Supported Link Speeds)",
+      "line_number": 541
+    },
+    "PCI_EXP_LNKCAP_SLS_2_5GB": {
+      "name": "PCI_EXP_LNKCAP_SLS_2_5GB",
+      "value": "0x00000001",
+      "description": "LNKCAP2 SLS Vector bit 0",
+      "line_number": 542
+    },
+    "PCI_EXP_LNKCAP_SLS_5_0GB": {
+      "name": "PCI_EXP_LNKCAP_SLS_5_0GB",
+      "value": "0x00000002",
+      "description": "LNKCAP2 SLS Vector bit 1",
+      "line_number": 543
+    },
+    "PCI_EXP_LNKCAP_SLS_8_0GB": {
+      "name": "PCI_EXP_LNKCAP_SLS_8_0GB",
+      "value": "0x00000003",
+      "description": "LNKCAP2 SLS Vector bit 2",
+      "line_number": 544
+    },
+    "PCI_EXP_LNKCAP_SLS_16_0GB": {
+      "name": "PCI_EXP_LNKCAP_SLS_16_0GB",
+      "value": "0x00000004",
+      "description": "LNKCAP2 SLS Vector bit 3",
+      "line_number": 545
+    },
+    "PCI_EXP_LNKCAP_SLS_32_0GB": {
+      "name": "PCI_EXP_LNKCAP_SLS_32_0GB",
+      "value": "0x00000005",
+      "description": "LNKCAP2 SLS Vector bit 4",
+      "line_number": 546
+    },
+    "PCI_EXP_LNKCAP_SLS_64_0GB": {
+      "name": "PCI_EXP_LNKCAP_SLS_64_0GB",
+      "value": "0x00000006",
+      "description": "LNKCAP2 SLS Vector bit 5",
+      "line_number": 547
+    },
+    "PCI_EXP_LNKCTL": {
+      "name": "PCI_EXP_LNKCTL",
+      "value": "0x10",
+      "description": "Link Control",
+      "line_number": 559
+    },
+    "PCI_EXP_LNKCTL_ASPMC": {
+      "name": "PCI_EXP_LNKCTL_ASPMC",
+      "value": "0x0003",
+      "description": "ASPM Control",
+      "line_number": 560
+    },
+    "PCI_EXP_LNKCTL_ASPM_L0S": {
+      "name": "PCI_EXP_LNKCTL_ASPM_L0S",
+      "value": "0x0001",
+      "description": "L0s Enable",
+      "line_number": 561
+    },
+    "PCI_EXP_LNKCTL_ASPM_L1": {
+      "name": "PCI_EXP_LNKCTL_ASPM_L1",
+      "value": "0x0002",
+      "description": "L1 Enable",
+      "line_number": 562
+    },
+    "PCI_EXP_LNKCTL_RCB": {
+      "name": "PCI_EXP_LNKCTL_RCB",
+      "value": "0x0008",
+      "description": "Read Completion Boundary",
+      "line_number": 563
+    },
+    "PCI_EXP_LNKCTL_LD": {
+      "name": "PCI_EXP_LNKCTL_LD",
+      "value": "0x0010",
+      "description": "Link Disable",
+      "line_number": 564
+    },
+    "PCI_EXP_LNKCTL_RL": {
+      "name": "PCI_EXP_LNKCTL_RL",
+      "value": "0x0020",
+      "description": "Retrain Link",
+      "line_number": 565
+    },
+    "PCI_EXP_LNKCTL_CCC": {
+      "name": "PCI_EXP_LNKCTL_CCC",
+      "value": "0x0040",
+      "description": "Common Clock Configuration",
+      "line_number": 566
+    },
+    "PCI_EXP_LNKCTL_ES": {
+      "name": "PCI_EXP_LNKCTL_ES",
+      "value": "0x0080",
+      "description": "Extended Synch",
+      "line_number": 567
+    },
+    "PCI_EXP_LNKSTA": {
+      "name": "PCI_EXP_LNKSTA",
+      "value": "0x12",
+      "description": "Link Status",
+      "line_number": 572
+    },
+    "PCI_EXP_LNKSTA_CLS": {
+      "name": "PCI_EXP_LNKSTA_CLS",
+      "value": "0x000f",
+      "description": "Current Link Speed",
+      "line_number": 573
+    },
+    "PCI_EXP_LNKSTA_CLS_2_5GB": {
+      "name": "PCI_EXP_LNKSTA_CLS_2_5GB",
+      "value": "0x0001",
+      "description": "Current Link Speed 2.5GT/s",
+      "line_number": 574
+    },
+    "PCI_EXP_LNKSTA_CLS_5_0GB": {
+      "name": "PCI_EXP_LNKSTA_CLS_5_0GB",
+      "value": "0x0002",
+      "description": "Current Link Speed 5.0GT/s",
+      "line_number": 575
+    },
+    "PCI_EXP_LNKSTA_CLS_8_0GB": {
+      "name": "PCI_EXP_LNKSTA_CLS_8_0GB",
+      "value": "0x0003",
+      "description": "Current Link Speed 8.0GT/s",
+      "line_number": 576
+    },
+    "PCI_EXP_LNKSTA_CLS_16_0GB": {
+      "name": "PCI_EXP_LNKSTA_CLS_16_0GB",
+      "value": "0x0004",
+      "description": "Current Link Speed 16.0GT/s",
+      "line_number": 577
+    },
+    "PCI_EXP_LNKSTA_CLS_32_0GB": {
+      "name": "PCI_EXP_LNKSTA_CLS_32_0GB",
+      "value": "0x0005",
+      "description": "Current Link Speed 32.0GT/s",
+      "line_number": 578
+    },
+    "PCI_EXP_LNKSTA_CLS_64_0GB": {
+      "name": "PCI_EXP_LNKSTA_CLS_64_0GB",
+      "value": "0x0006",
+      "description": "Current Link Speed 64.0GT/s",
+      "line_number": 579
+    },
+    "PCI_EXP_LNKSTA_NLW_X1": {
+      "name": "PCI_EXP_LNKSTA_NLW_X1",
+      "value": "0x0010",
+      "description": "Current Link Width x1",
+      "line_number": 581
+    },
+    "PCI_EXP_LNKSTA_NLW_X2": {
+      "name": "PCI_EXP_LNKSTA_NLW_X2",
+      "value": "0x0020",
+      "description": "Current Link Width x2",
+      "line_number": 582
+    },
+    "PCI_EXP_LNKSTA_NLW_X4": {
+      "name": "PCI_EXP_LNKSTA_NLW_X4",
+      "value": "0x0040",
+      "description": "Current Link Width x4",
+      "line_number": 583
+    },
+    "PCI_EXP_LNKSTA_NLW_X8": {
+      "name": "PCI_EXP_LNKSTA_NLW_X8",
+      "value": "0x0080",
+      "description": "Current Link Width x8",
+      "line_number": 584
+    },
+    "PCI_EXP_SLTCAP": {
+      "name": "PCI_EXP_SLTCAP",
+      "value": "0x14",
+      "description": "Slot Capabilities",
+      "line_number": 592
+    },
+    "PCI_EXP_SLTCAP_ABP": {
+      "name": "PCI_EXP_SLTCAP_ABP",
+      "value": "0x00000001",
+      "description": "Attention Button Present",
+      "line_number": 593
+    },
+    "PCI_EXP_SLTCAP_PCP": {
+      "name": "PCI_EXP_SLTCAP_PCP",
+      "value": "0x00000002",
+      "description": "Power Controller Present",
+      "line_number": 594
+    },
+    "PCI_EXP_SLTCAP_MRLSP": {
+      "name": "PCI_EXP_SLTCAP_MRLSP",
+      "value": "0x00000004",
+      "description": "MRL Sensor Present",
+      "line_number": 595
+    },
+    "PCI_EXP_SLTCAP_AIP": {
+      "name": "PCI_EXP_SLTCAP_AIP",
+      "value": "0x00000008",
+      "description": "Attention Indicator Present",
+      "line_number": 596
+    },
+    "PCI_EXP_SLTCAP_PIP": {
+      "name": "PCI_EXP_SLTCAP_PIP",
+      "value": "0x00000010",
+      "description": "Power Indicator Present",
+      "line_number": 597
+    },
+    "PCI_EXP_SLTCAP_HPS": {
+      "name": "PCI_EXP_SLTCAP_HPS",
+      "value": "0x00000020",
+      "description": "Hot-Plug Surprise",
+      "line_number": 598
+    },
+    "PCI_EXP_SLTCAP_HPC": {
+      "name": "PCI_EXP_SLTCAP_HPC",
+      "value": "0x00000040",
+      "description": "Hot-Plug Capable",
+      "line_number": 599
+    },
+    "PCI_EXP_SLTCTL": {
+      "name": "PCI_EXP_SLTCTL",
+      "value": "0x18",
+      "description": "Slot Control",
+      "line_number": 605
+    },
+    "PCI_EXP_SLTCTL_ABPE": {
+      "name": "PCI_EXP_SLTCTL_ABPE",
+      "value": "0x0001",
+      "description": "Attention Button Pressed Enable",
+      "line_number": 606
+    },
+    "PCI_EXP_SLTCTL_PFDE": {
+      "name": "PCI_EXP_SLTCTL_PFDE",
+      "value": "0x0002",
+      "description": "Power Fault Detected Enable",
+      "line_number": 607
+    },
+    "PCI_EXP_SLTCTL_MRLSCE": {
+      "name": "PCI_EXP_SLTCTL_MRLSCE",
+      "value": "0x0004",
+      "description": "MRL Sensor Changed Enable",
+      "line_number": 608
+    },
+    "PCI_EXP_SLTCTL_PDCE": {
+      "name": "PCI_EXP_SLTCTL_PDCE",
+      "value": "0x0008",
+      "description": "Presence Detect Changed Enable",
+      "line_number": 609
+    },
+    "PCI_EXP_SLTCTL_CCIE": {
+      "name": "PCI_EXP_SLTCTL_CCIE",
+      "value": "0x0010",
+      "description": "Command Completed Interrupt Enable",
+      "line_number": 610
+    },
+    "PCI_EXP_SLTCTL_HPIE": {
+      "name": "PCI_EXP_SLTCTL_HPIE",
+      "value": "0x0020",
+      "description": "Hot-Plug Interrupt Enable",
+      "line_number": 611
+    },
+    "PCI_EXP_SLTCTL_AIC": {
+      "name": "PCI_EXP_SLTCTL_AIC",
+      "value": "0x00c0",
+      "description": "Attention Indicator Control",
+      "line_number": 612
+    },
+    "PCI_EXP_SLTCTL_ATTN_IND_ON": {
+      "name": "PCI_EXP_SLTCTL_ATTN_IND_ON",
+      "value": "0x0040",
+      "description": "Attention Indicator on",
+      "line_number": 614
+    },
+    "PCI_EXP_SLTCTL_ATTN_IND_BLINK": {
+      "name": "PCI_EXP_SLTCTL_ATTN_IND_BLINK",
+      "value": "0x0080",
+      "description": "Attention Indicator blinking",
+      "line_number": 615
+    },
+    "PCI_EXP_SLTCTL_ATTN_IND_OFF": {
+      "name": "PCI_EXP_SLTCTL_ATTN_IND_OFF",
+      "value": "0x00c0",
+      "description": "Attention Indicator off",
+      "line_number": 616
+    },
+    "PCI_EXP_SLTCTL_PWR_ON": {
+      "name": "PCI_EXP_SLTCTL_PWR_ON",
+      "value": "0x0000",
+      "description": "Power On",
+      "line_number": 622
+    },
+    "PCI_EXP_SLTSTA": {
+      "name": "PCI_EXP_SLTSTA",
+      "value": "0x1a",
+      "description": "Slot Status",
+      "line_number": 628
+    },
+    "PCI_EXP_SLTSTA_ABP": {
+      "name": "PCI_EXP_SLTSTA_ABP",
+      "value": "0x0001",
+      "description": "Attention Button Pressed",
+      "line_number": 629
+    },
+    "PCI_EXP_SLTSTA_PFD": {
+      "name": "PCI_EXP_SLTSTA_PFD",
+      "value": "0x0002",
+      "description": "Power Fault Detected",
+      "line_number": 630
+    },
+    "PCI_EXP_SLTSTA_MRLSC": {
+      "name": "PCI_EXP_SLTSTA_MRLSC",
+      "value": "0x0004",
+      "description": "MRL Sensor Changed",
+      "line_number": 631
+    },
+    "PCI_EXP_SLTSTA_PDC": {
+      "name": "PCI_EXP_SLTSTA_PDC",
+      "value": "0x0008",
+      "description": "Presence Detect Changed",
+      "line_number": 632
+    },
+    "PCI_EXP_SLTSTA_CC": {
+      "name": "PCI_EXP_SLTSTA_CC",
+      "value": "0x0010",
+      "description": "Command Completed",
+      "line_number": 633
+    },
+    "PCI_EXP_SLTSTA_MRLSS": {
+      "name": "PCI_EXP_SLTSTA_MRLSS",
+      "value": "0x0020",
+      "description": "MRL Sensor State",
+      "line_number": 634
+    },
+    "PCI_EXP_SLTSTA_PDS": {
+      "name": "PCI_EXP_SLTSTA_PDS",
+      "value": "0x0040",
+      "description": "Presence Detect State",
+      "line_number": 635
+    },
+    "PCI_EXP_SLTSTA_EIS": {
+      "name": "PCI_EXP_SLTSTA_EIS",
+      "value": "0x0080",
+      "description": "Electromechanical Interlock Status",
+      "line_number": 636
+    },
+    "PCI_EXP_RTCTL": {
+      "name": "PCI_EXP_RTCTL",
+      "value": "0x1c",
+      "description": "Root Control",
+      "line_number": 638
+    },
+    "PCI_EXP_RTCTL_SECEE": {
+      "name": "PCI_EXP_RTCTL_SECEE",
+      "value": "0x0001",
+      "description": "System Error on Correctable Error",
+      "line_number": 639
+    },
+    "PCI_EXP_RTCTL_SENFEE": {
+      "name": "PCI_EXP_RTCTL_SENFEE",
+      "value": "0x0002",
+      "description": "System Error on Non-Fatal Error",
+      "line_number": 640
+    },
+    "PCI_EXP_RTCTL_SEFEE": {
+      "name": "PCI_EXP_RTCTL_SEFEE",
+      "value": "0x0004",
+      "description": "System Error on Fatal Error",
+      "line_number": 641
+    },
+    "PCI_EXP_RTCTL_PMEIE": {
+      "name": "PCI_EXP_RTCTL_PMEIE",
+      "value": "0x0008",
+      "description": "PME Interrupt Enable",
+      "line_number": 642
+    },
+    "PCI_EXP_RTCTL_RRS_SVE": {
+      "name": "PCI_EXP_RTCTL_RRS_SVE",
+      "value": "0x0010",
+      "description": "Config RRS Software Visibility Enable",
+      "line_number": 643
+    },
+    "PCI_EXP_RTCAP": {
+      "name": "PCI_EXP_RTCAP",
+      "value": "0x1e",
+      "description": "Root Capabilities",
+      "line_number": 645
+    },
+    "PCI_EXP_RTCAP_RRS_SV": {
+      "name": "PCI_EXP_RTCAP_RRS_SV",
+      "value": "0x0001",
+      "description": "Config RRS Software Visibility",
+      "line_number": 646
+    },
+    "PCI_EXP_RTSTA": {
+      "name": "PCI_EXP_RTSTA",
+      "value": "0x20",
+      "description": "Root Status",
+      "line_number": 648
+    },
+    "PCI_EXP_DEVCAP2": {
+      "name": "PCI_EXP_DEVCAP2",
+      "value": "0x24",
+      "description": "Device Capabilities 2",
+      "line_number": 660
+    },
+    "PCI_EXP_DEVCAP2_COMP_TMOUT_DIS": {
+      "name": "PCI_EXP_DEVCAP2_COMP_TMOUT_DIS",
+      "value": "0x00000010",
+      "description": "Completion Timeout Disable supported",
+      "line_number": 661
+    },
+    "PCI_EXP_DEVCAP2_ARI": {
+      "name": "PCI_EXP_DEVCAP2_ARI",
+      "value": "0x00000020",
+      "description": "Alternative Routing-ID",
+      "line_number": 662
+    },
+    "PCI_EXP_DEVCAP2_ATOMIC_ROUTE": {
+      "name": "PCI_EXP_DEVCAP2_ATOMIC_ROUTE",
+      "value": "0x00000040",
+      "description": "Atomic Op routing",
+      "line_number": 663
+    },
+    "PCI_EXP_DEVCAP2_ATOMIC_COMP32": {
+      "name": "PCI_EXP_DEVCAP2_ATOMIC_COMP32",
+      "value": "0x00000080",
+      "description": "32b AtomicOp completion",
+      "line_number": 664
+    },
+    "PCI_EXP_DEVCTL2": {
+      "name": "PCI_EXP_DEVCTL2",
+      "value": "0x28",
+      "description": "Device Control 2",
+      "line_number": 674
+    },
+    "PCI_EXP_DEVCTL2_COMP_TIMEOUT": {
+      "name": "PCI_EXP_DEVCTL2_COMP_TIMEOUT",
+      "value": "0x000f",
+      "description": "Completion Timeout Value",
+      "line_number": 675
+    },
+    "PCI_EXP_DEVCTL2_COMP_TMOUT_DIS": {
+      "name": "PCI_EXP_DEVCTL2_COMP_TMOUT_DIS",
+      "value": "0x0010",
+      "description": "Completion Timeout Disable",
+      "line_number": 676
+    },
+    "PCI_EXP_DEVCTL2_ARI": {
+      "name": "PCI_EXP_DEVCTL2_ARI",
+      "value": "0x0020",
+      "description": "Alternative Routing-ID",
+      "line_number": 677
+    },
+    "PCI_EXP_DEVCTL2_ATOMIC_REQ": {
+      "name": "PCI_EXP_DEVCTL2_ATOMIC_REQ",
+      "value": "0x0040",
+      "description": "Set Atomic requests",
+      "line_number": 678
+    },
+    "PCI_EXP_DEVCTL2_ATOMIC_EGRESS_BLOCK": {
+      "name": "PCI_EXP_DEVCTL2_ATOMIC_EGRESS_BLOCK",
+      "value": "0x0080",
+      "description": "Block atomic egress",
+      "line_number": 679
+    },
+    "PCI_EXP_DEVSTA2": {
+      "name": "PCI_EXP_DEVSTA2",
+      "value": "0x2a",
+      "description": "Device Status 2",
+      "line_number": 686
+    },
+    "PCI_EXP_LNKCAP2": {
+      "name": "PCI_EXP_LNKCAP2",
+      "value": "0x2c",
+      "description": "Link Capabilities 2",
+      "line_number": 688
+    },
+    "PCI_EXP_LNKCAP2_SLS": {
+      "name": "PCI_EXP_LNKCAP2_SLS",
+      "value": "0x000000fe",
+      "description": "Supported Link Speeds Vector",
+      "line_number": 689
+    },
+    "PCI_EXP_LNKCAP2_SLS_2_5GB": {
+      "name": "PCI_EXP_LNKCAP2_SLS_2_5GB",
+      "value": "0x00000002",
+      "description": "Supported Speed 2.5GT/s",
+      "line_number": 690
+    },
+    "PCI_EXP_LNKCAP2_SLS_5_0GB": {
+      "name": "PCI_EXP_LNKCAP2_SLS_5_0GB",
+      "value": "0x00000004",
+      "description": "Supported Speed 5GT/s",
+      "line_number": 691
+    },
+    "PCI_EXP_LNKCAP2_SLS_8_0GB": {
+      "name": "PCI_EXP_LNKCAP2_SLS_8_0GB",
+      "value": "0x00000008",
+      "description": "Supported Speed 8GT/s",
+      "line_number": 692
+    },
+    "PCI_EXP_LNKCAP2_SLS_16_0GB": {
+      "name": "PCI_EXP_LNKCAP2_SLS_16_0GB",
+      "value": "0x00000010",
+      "description": "Supported Speed 16GT/s",
+      "line_number": 693
+    },
+    "PCI_EXP_LNKCAP2_SLS_32_0GB": {
+      "name": "PCI_EXP_LNKCAP2_SLS_32_0GB",
+      "value": "0x00000020",
+      "description": "Supported Speed 32GT/s",
+      "line_number": 694
+    },
+    "PCI_EXP_LNKCAP2_SLS_64_0GB": {
+      "name": "PCI_EXP_LNKCAP2_SLS_64_0GB",
+      "value": "0x00000040",
+      "description": "Supported Speed 64GT/s",
+      "line_number": 695
+    },
+    "PCI_EXP_LNKCTL2": {
+      "name": "PCI_EXP_LNKCTL2",
+      "value": "0x30",
+      "description": "Link Control 2",
+      "line_number": 697
+    },
+    "PCI_EXP_LNKCTL2_TLS": {
+      "name": "PCI_EXP_LNKCTL2_TLS",
+      "value": "0x000f",
+      "description": "",
+      "line_number": 698
+    },
+    "PCI_EXP_LNKCTL2_TLS_2_5GT": {
+      "name": "PCI_EXP_LNKCTL2_TLS_2_5GT",
+      "value": "0x0001",
+      "description": "Supported Speed 2.5GT/s",
+      "line_number": 699
+    },
+    "PCI_EXP_LNKCTL2_TLS_5_0GT": {
+      "name": "PCI_EXP_LNKCTL2_TLS_5_0GT",
+      "value": "0x0002",
+      "description": "Supported Speed 5GT/s",
+      "line_number": 700
+    },
+    "PCI_EXP_LNKCTL2_TLS_8_0GT": {
+      "name": "PCI_EXP_LNKCTL2_TLS_8_0GT",
+      "value": "0x0003",
+      "description": "Supported Speed 8GT/s",
+      "line_number": 701
+    },
+    "PCI_EXP_LNKCTL2_TLS_16_0GT": {
+      "name": "PCI_EXP_LNKCTL2_TLS_16_0GT",
+      "value": "0x0004",
+      "description": "Supported Speed 16GT/s",
+      "line_number": 702
+    },
+    "PCI_EXP_LNKCTL2_TLS_32_0GT": {
+      "name": "PCI_EXP_LNKCTL2_TLS_32_0GT",
+      "value": "0x0005",
+      "description": "Supported Speed 32GT/s",
+      "line_number": 703
+    },
+    "PCI_EXP_LNKCTL2_TLS_64_0GT": {
+      "name": "PCI_EXP_LNKCTL2_TLS_64_0GT",
+      "value": "0x0006",
+      "description": "Supported Speed 64GT/s",
+      "line_number": 704
+    },
+    "PCI_EXP_LNKCTL2_ENTER_COMP": {
+      "name": "PCI_EXP_LNKCTL2_ENTER_COMP",
+      "value": "0x0010",
+      "description": "Enter Compliance",
+      "line_number": 705
+    },
+    "PCI_EXP_LNKCTL2_HASD": {
+      "name": "PCI_EXP_LNKCTL2_HASD",
+      "value": "0x0020",
+      "description": "HW Autonomous Speed Disable",
+      "line_number": 707
+    },
+    "PCI_EXP_LNKSTA2": {
+      "name": "PCI_EXP_LNKSTA2",
+      "value": "0x32",
+      "description": "Link Status 2",
+      "line_number": 708
+    },
+    "PCI_EXP_SLTCAP2": {
+      "name": "PCI_EXP_SLTCAP2",
+      "value": "0x34",
+      "description": "Slot Capabilities 2",
+      "line_number": 711
+    },
+    "PCI_EXP_SLTCAP2_IBPD": {
+      "name": "PCI_EXP_SLTCAP2_IBPD",
+      "value": "0x00000001",
+      "description": "In-band PD Disable Supported",
+      "line_number": 712
+    },
+    "PCI_EXP_SLTCTL2": {
+      "name": "PCI_EXP_SLTCTL2",
+      "value": "0x38",
+      "description": "Slot Control 2",
+      "line_number": 713
+    },
+    "PCI_EXP_SLTSTA2": {
+      "name": "PCI_EXP_SLTSTA2",
+      "value": "0x3a",
+      "description": "Slot Status 2",
+      "line_number": 714
+    },
+    "PCI_EXP_DEVCAP2_TPH_COMP_NONE": {
+      "name": "PCI_EXP_DEVCAP2_TPH_COMP_NONE",
+      "value": "0x0",
+      "description": "None",
+      "line_number": 1048
+    },
+    "PCI_EXP_DEVCAP2_TPH_COMP_TPH_ONLY": {
+      "name": "PCI_EXP_DEVCAP2_TPH_COMP_TPH_ONLY",
+      "value": "0x1",
+      "description": "TPH only",
+      "line_number": 1049
+    },
+    "PCI_EXP_DEVCAP2_TPH_COMP_EXT_TPH": {
+      "name": "PCI_EXP_DEVCAP2_TPH_COMP_EXT_TPH",
+      "value": "0x3",
+      "description": "TPH and Extended TPH",
+      "line_number": 1050
+    },
+    "PCI_EXP_DPC_CAP": {
+      "name": "PCI_EXP_DPC_CAP",
+      "value": "0x04",
+      "description": "DPC Capability",
+      "line_number": 1077
+    },
+    "PCI_EXP_DPC_IRQ": {
+      "name": "PCI_EXP_DPC_IRQ",
+      "value": "0x001F",
+      "description": "Interrupt Message Number",
+      "line_number": 1078
+    },
+    "PCI_EXP_DPC_CAP_RP_EXT": {
+      "name": "PCI_EXP_DPC_CAP_RP_EXT",
+      "value": "0x0020",
+      "description": "Root Port Extensions",
+      "line_number": 1079
+    },
+    "PCI_EXP_DPC_CAP_POISONED_TLP": {
+      "name": "PCI_EXP_DPC_CAP_POISONED_TLP",
+      "value": "0x0040",
+      "description": "Poisoned TLP Egress Blocking Supported",
+      "line_number": 1080
+    },
+    "PCI_EXP_DPC_CAP_SW_TRIGGER": {
+      "name": "PCI_EXP_DPC_CAP_SW_TRIGGER",
+      "value": "0x0080",
+      "description": "Software Triggering Supported",
+      "line_number": 1081
+    },
+    "PCI_EXP_DPC_CTL": {
+      "name": "PCI_EXP_DPC_CTL",
+      "value": "0x06",
+      "description": "DPC control",
+      "line_number": 1086
+    },
+    "PCI_EXP_DPC_CTL_EN_FATAL": {
+      "name": "PCI_EXP_DPC_CTL_EN_FATAL",
+      "value": "0x0001",
+      "description": "Enable trigger on ERR_FATAL message",
+      "line_number": 1087
+    },
+    "PCI_EXP_DPC_CTL_EN_NONFATAL": {
+      "name": "PCI_EXP_DPC_CTL_EN_NONFATAL",
+      "value": "0x0002",
+      "description": "Enable trigger on ERR_NONFATAL message",
+      "line_number": 1088
+    },
+    "PCI_EXP_DPC_CTL_INT_EN": {
+      "name": "PCI_EXP_DPC_CTL_INT_EN",
+      "value": "0x0008",
+      "description": "DPC Interrupt Enable",
+      "line_number": 1089
+    },
+    "PCI_EXP_DPC_STATUS": {
+      "name": "PCI_EXP_DPC_STATUS",
+      "value": "0x08",
+      "description": "DPC Status",
+      "line_number": 1091
+    },
+    "PCI_EXP_DPC_STATUS_TRIGGER": {
+      "name": "PCI_EXP_DPC_STATUS_TRIGGER",
+      "value": "0x0001",
+      "description": "Trigger Status",
+      "line_number": 1092
+    },
+    "PCI_EXP_DPC_STATUS_TRIGGER_RSN": {
+      "name": "PCI_EXP_DPC_STATUS_TRIGGER_RSN",
+      "value": "0x0006",
+      "description": "Trigger Reason",
+      "line_number": 1093
+    },
+    "PCI_EXP_DPC_STATUS_TRIGGER_RSN_UNCOR": {
+      "name": "PCI_EXP_DPC_STATUS_TRIGGER_RSN_UNCOR",
+      "value": "0x0000",
+      "description": "Uncorrectable error",
+      "line_number": 1094
+    },
+    "PCI_EXP_DPC_STATUS_TRIGGER_RSN_NFE": {
+      "name": "PCI_EXP_DPC_STATUS_TRIGGER_RSN_NFE",
+      "value": "0x0002",
+      "description": "Rcvd ERR_NONFATAL",
+      "line_number": 1095
+    },
+    "PCI_EXP_DPC_STATUS_TRIGGER_RSN_FE": {
+      "name": "PCI_EXP_DPC_STATUS_TRIGGER_RSN_FE",
+      "value": "0x0004",
+      "description": "Rcvd ERR_FATAL",
+      "line_number": 1096
+    },
+    "PCI_EXP_DPC_STATUS_TRIGGER_RSN_IN_EXT": {
+      "name": "PCI_EXP_DPC_STATUS_TRIGGER_RSN_IN_EXT",
+      "value": "0x0006",
+      "description": "Reason in Trig Reason Extension field",
+      "line_number": 1097
+    },
+    "PCI_EXP_DPC_STATUS_INTERRUPT": {
+      "name": "PCI_EXP_DPC_STATUS_INTERRUPT",
+      "value": "0x0008",
+      "description": "Interrupt Status",
+      "line_number": 1098
+    },
+    "PCI_EXP_DPC_RP_BUSY": {
+      "name": "PCI_EXP_DPC_RP_BUSY",
+      "value": "0x0010",
+      "description": "Root Port Busy",
+      "line_number": 1099
+    },
+    "PCI_EXP_DPC_STATUS_TRIGGER_RSN_EXT": {
+      "name": "PCI_EXP_DPC_STATUS_TRIGGER_RSN_EXT",
+      "value": "0x0060",
+      "description": "Trig Reason Extension",
+      "line_number": 1100
+    },
+    "PCI_EXP_DPC_STATUS_TRIGGER_RSN_RP_PIO": {
+      "name": "PCI_EXP_DPC_STATUS_TRIGGER_RSN_RP_PIO",
+      "value": "0x0000",
+      "description": "RP PIO error",
+      "line_number": 1101
+    },
+    "PCI_EXP_DPC_STATUS_TRIGGER_RSN_SW_TRIGGER": {
+      "name": "PCI_EXP_DPC_STATUS_TRIGGER_RSN_SW_TRIGGER",
+      "value": "0x0020",
+      "description": "DPC SW Trigger bit",
+      "line_number": 1102
+    },
+    "PCI_EXP_DPC_SOURCE_ID": {
+      "name": "PCI_EXP_DPC_SOURCE_ID",
+      "value": "0x0A",
+      "description": "DPC Source Identifier",
+      "line_number": 1105
+    },
+    "PCI_EXP_DPC_RP_PIO_STATUS": {
+      "name": "PCI_EXP_DPC_RP_PIO_STATUS",
+      "value": "0x0C",
+      "description": "RP PIO Status",
+      "line_number": 1107
+    },
+    "PCI_EXP_DPC_RP_PIO_MASK": {
+      "name": "PCI_EXP_DPC_RP_PIO_MASK",
+      "value": "0x10",
+      "description": "RP PIO Mask",
+      "line_number": 1108
+    },
+    "PCI_EXP_DPC_RP_PIO_SEVERITY": {
+      "name": "PCI_EXP_DPC_RP_PIO_SEVERITY",
+      "value": "0x14",
+      "description": "RP PIO Severity",
+      "line_number": 1109
+    },
+    "PCI_EXP_DPC_RP_PIO_SYSERROR": {
+      "name": "PCI_EXP_DPC_RP_PIO_SYSERROR",
+      "value": "0x18",
+      "description": "RP PIO SysError",
+      "line_number": 1110
+    },
+    "PCI_EXP_DPC_RP_PIO_EXCEPTION": {
+      "name": "PCI_EXP_DPC_RP_PIO_EXCEPTION",
+      "value": "0x1C",
+      "description": "RP PIO Exception",
+      "line_number": 1111
+    },
+    "PCI_EXP_DPC_RP_PIO_HEADER_LOG": {
+      "name": "PCI_EXP_DPC_RP_PIO_HEADER_LOG",
+      "value": "0x20",
+      "description": "RP PIO Header Log",
+      "line_number": 1112
+    },
+    "PCI_EXP_DPC_RP_PIO_IMPSPEC_LOG": {
+      "name": "PCI_EXP_DPC_RP_PIO_IMPSPEC_LOG",
+      "value": "0x30",
+      "description": "RP PIO ImpSpec Log",
+      "line_number": 1113
+    },
+    "PCI_EXP_DPC_RP_PIO_TLPPREFIX_LOG": {
+      "name": "PCI_EXP_DPC_RP_PIO_TLPPREFIX_LOG",
+      "value": "0x34",
+      "description": "RP PIO TLP Prefix Log",
+      "line_number": 1114
+    }
+  }
+}

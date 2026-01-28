@@ -31,12 +31,17 @@ echo "Step 3: Chunking spec..."
 python3 -m src.embeddings.chunker "$SPEC_TEXT" data/toc/toc.json data/chunks/chunks.json
 echo ""
 
+echo "Step 4: Extracting Linux kernel header constants..."
+python3 -m src.parsers.linux_header_parser data/linux_headers/pci_constants.json
+echo ""
+
 echo "=== Data preparation complete! ==="
 echo ""
 echo "Generated files:"
 echo "  - data/registers/registers.json"
 echo "  - data/toc/toc.json"
 echo "  - data/chunks/chunks.json"
+echo "  - data/linux_headers/pci_constants.json"
 echo ""
 echo "You can now run the MCP server with:"
 echo "  python -m src.server"
