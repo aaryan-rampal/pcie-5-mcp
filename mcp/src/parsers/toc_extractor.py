@@ -39,12 +39,11 @@ class TOCEntry:
 class TOCExtractor:
     """Extract table of contents from PCIe spec text."""
 
-    # Pattern: Section number + title + page
-    # Example: "1.2.3 Some Title.............................123"
-    # Or: "1.2.3 Some Title 123"
+    # Pattern: Section number + title + many dots + page
+    # Example: "1.2.3 Some Title...............................123"
+    # Note: Actual format has ~100+ dots filling line width
     TOC_PATTERN = re.compile(
-        r'^(\d+(?:\.\d+)*)\s+(.+?)\s*\.{3,}\s*(\d+)$|'  # With dots
-        r'^(\d+(?:\.\d+)*)\s+(.+?)\s+(\d+)$',  # Without dots
+        r'^(\d+(?:\.\d+)*)\s+(.+?)\s*\.{10,}\s*(\d+)\s*$',  # With many dots
         re.MULTILINE
     )
 
@@ -88,10 +87,9 @@ class TOCExtractor:
             toc_start = 0
 
         # TOC typically ends before "1. Introduction" content starts
-        # Look for a reasonable endpoint (e.g., first chapter content)
-        toc_end = text.find("1.1 ", toc_start + 100)  # Skip the TOC entry itself
-        if toc_end == -1:
-            toc_end = min(toc_start + 50000, len(text))  # ~800 lines
+        # Use large range to capture full TOC (it's only a few pages)
+        # Don't search for "1.1 " as that matches TOC entry, not content
+        toc_end = min(toc_start + 50000, len(text))  # ~800 lines, full TOC
 
         toc_text = text[toc_start:toc_end]
 

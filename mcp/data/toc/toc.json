@@ -1,5 +1,2648 @@
 {
-  "entries": [],
-  "total_sections": 0,
-  "chapters": []
+  "entries": [
+    {
+      "section_id": "1.1",
+      "title": "A Third Generation I/O Interconnect",
+      "page": 89,
+      "level": 2,
+      "parent": "1",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.2",
+      "title": "PCI Express Link",
+      "page": 90,
+      "level": 2,
+      "parent": "1",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.3",
+      "title": "PCI Express Fabric Topology",
+      "page": 92,
+      "level": 2,
+      "parent": "1",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.3.1",
+      "title": "Root Complex",
+      "page": 92,
+      "level": 3,
+      "parent": "1.3",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.3.2",
+      "title": "Endpoints",
+      "page": 93,
+      "level": 3,
+      "parent": "1.3",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.3.2.1",
+      "title": "Legacy Endpoint Rules",
+      "page": 93,
+      "level": 4,
+      "parent": "1.3.2",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.3.2.2",
+      "title": "PCI Express Endpoint Rules",
+      "page": 94,
+      "level": 4,
+      "parent": "1.3.2",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.3.2.3",
+      "title": "Root Complex Integrated Endpoint Rules",
+      "page": 94,
+      "level": 4,
+      "parent": "1.3.2",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.3.3",
+      "title": "Switch",
+      "page": 95,
+      "level": 3,
+      "parent": "1.3",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.3.4",
+      "title": "Root Complex Event Collector",
+      "page": 96,
+      "level": 3,
+      "parent": "1.3",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.3.5",
+      "title": "PCI Express to PCI/PCI-X Bridge",
+      "page": 96,
+      "level": 3,
+      "parent": "1.3",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.4",
+      "title": "Hardware/Software Model for Discovery, Configuration and Operation",
+      "page": 96,
+      "level": 2,
+      "parent": "1",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.5",
+      "title": "PCI Express Layering Overview",
+      "page": 97,
+      "level": 2,
+      "parent": "1",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.5.1",
+      "title": "Transaction Layer",
+      "page": 99,
+      "level": 3,
+      "parent": "1.5",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.5.2",
+      "title": "Data Link Layer",
+      "page": 99,
+      "level": 3,
+      "parent": "1.5",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.5.3",
+      "title": "Physical Layer",
+      "page": 99,
+      "level": 3,
+      "parent": "1.5",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.5.4",
+      "title": "Layer Functions and Services",
+      "page": 100,
+      "level": 3,
+      "parent": "1.5",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.5.4.1",
+      "title": "Transaction Layer Services",
+      "page": 100,
+      "level": 4,
+      "parent": "1.5.4",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.5.4.2",
+      "title": "Data Link Layer Services",
+      "page": 101,
+      "level": 4,
+      "parent": "1.5.4",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.5.4.3",
+      "title": "Physical Layer Services",
+      "page": 101,
+      "level": 4,
+      "parent": "1.5.4",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.5.4.4",
+      "title": "Inter-Layer Interfaces",
+      "page": 102,
+      "level": 4,
+      "parent": "1.5.4",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.5.4.4.1",
+      "title": "Transaction/Data Link Interface",
+      "page": 102,
+      "level": 5,
+      "parent": "1.5.4.4",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "1.5.4.4.2",
+      "title": "Data Link/Physical Interface",
+      "page": 102,
+      "level": 5,
+      "parent": "1.5.4.4",
+      "chapter": 1,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.1",
+      "title": "Transaction Layer Overview",
+      "page": 103,
+      "level": 2,
+      "parent": "2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.1.1",
+      "title": "Address Spaces, Transaction Types, and Usage",
+      "page": 104,
+      "level": 3,
+      "parent": "2.1",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.1.1.1",
+      "title": "Memory Transactions",
+      "page": 104,
+      "level": 4,
+      "parent": "2.1.1",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.1.1.2",
+      "title": "I/O Transactions",
+      "page": 104,
+      "level": 4,
+      "parent": "2.1.1",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.1.1.3",
+      "title": "Configuration Transactions",
+      "page": 105,
+      "level": 4,
+      "parent": "2.1.1",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.1.1.4",
+      "title": "Message Transactions",
+      "page": 105,
+      "level": 4,
+      "parent": "2.1.1",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.1.2",
+      "title": "Packet Format Overview",
+      "page": 105,
+      "level": 3,
+      "parent": "2.1",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2",
+      "title": "Transaction Layer Protocol - Packet Definition",
+      "page": 107,
+      "level": 2,
+      "parent": "2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.1",
+      "title": "Common Packet Header Fields",
+      "page": 107,
+      "level": 3,
+      "parent": "2.2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.2",
+      "title": "TLPs with Data Payloads - Rules",
+      "page": 110,
+      "level": 3,
+      "parent": "2.2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.3",
+      "title": "TLP Digest Rules",
+      "page": 113,
+      "level": 3,
+      "parent": "2.2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.4",
+      "title": "Routing and Addressing Rules",
+      "page": 113,
+      "level": 3,
+      "parent": "2.2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.4.1",
+      "title": "Address-Based Routing Rules",
+      "page": 113,
+      "level": 4,
+      "parent": "2.2.4",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.4.2",
+      "title": "ID Based Routing Rules",
+      "page": 115,
+      "level": 4,
+      "parent": "2.2.4",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.5",
+      "title": "First/Last DW Byte Enables Rules",
+      "page": 117,
+      "level": 3,
+      "parent": "2.2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.6",
+      "title": "Transaction Descriptor",
+      "page": 119,
+      "level": 3,
+      "parent": "2.2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.6.1",
+      "title": "Overview",
+      "page": 119,
+      "level": 4,
+      "parent": "2.2.6",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.6.2",
+      "title": "Transaction Descriptor - Transaction ID Field",
+      "page": 120,
+      "level": 4,
+      "parent": "2.2.6",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.6.3",
+      "title": "Transaction Descriptor - Attributes Field",
+      "page": 125,
+      "level": 4,
+      "parent": "2.2.6",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.6.4",
+      "title": "Relaxed OrderingandID-Based OrderingAttributes",
+      "page": 126,
+      "level": 4,
+      "parent": "2.2.6",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.6.5",
+      "title": "No SnoopAttribute",
+      "page": 126,
+      "level": 4,
+      "parent": "2.2.6",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.6.6",
+      "title": "Transaction Descriptor - Traffic Class Field",
+      "page": 127,
+      "level": 4,
+      "parent": "2.2.6",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.7",
+      "title": "Memory, I/O, and Configuration Request Rules",
+      "page": 127,
+      "level": 3,
+      "parent": "2.2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.7.1",
+      "title": "TPH Rules",
+      "page": 131,
+      "level": 4,
+      "parent": "2.2.7",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.8",
+      "title": "Message Request Rules",
+      "page": 133,
+      "level": 3,
+      "parent": "2.2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.8.1",
+      "title": "INTx Interrupt Signaling - Rules",
+      "page": 135,
+      "level": 4,
+      "parent": "2.2.8",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.8.2",
+      "title": "Power Management Messages",
+      "page": 139,
+      "level": 4,
+      "parent": "2.2.8",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.8.3",
+      "title": "Error Signaling Messages",
+      "page": 140,
+      "level": 4,
+      "parent": "2.2.8",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.8.4",
+      "title": "Locked Transactions Support",
+      "page": 141,
+      "level": 4,
+      "parent": "2.2.8",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.8.5",
+      "title": "Slot Power Limit Support",
+      "page": 142,
+      "level": 4,
+      "parent": "2.2.8",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.8.6",
+      "title": "Vendor_Defined Messages",
+      "page": 143,
+      "level": 4,
+      "parent": "2.2.8",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.8.6.1",
+      "title": "PCI-SIG-Defined VDMs",
+      "page": 144,
+      "level": 5,
+      "parent": "2.2.8.6",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.8.6.2",
+      "title": "LN Messages",
+      "page": 145,
+      "level": 5,
+      "parent": "2.2.8.6",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.8.6.3",
+      "title": "Device Readiness Status (DRS) Message",
+      "page": 146,
+      "level": 5,
+      "parent": "2.2.8.6",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.8.6.4",
+      "title": "Function Readiness Status Message(FRS Message)",
+      "page": 147,
+      "level": 5,
+      "parent": "2.2.8.6",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.8.6.5",
+      "title": "Hierarchy ID Message",
+      "page": 148,
+      "level": 5,
+      "parent": "2.2.8.6",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.8.7",
+      "title": "Ignored Messages",
+      "page": 150,
+      "level": 4,
+      "parent": "2.2.8",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.8.8",
+      "title": "Latency Tolerance Reporting (LTR) Message",
+      "page": 150,
+      "level": 4,
+      "parent": "2.2.8",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.8.9",
+      "title": "Optimized Buffer Flush/Fill (OBFF) Message",
+      "page": 151,
+      "level": 4,
+      "parent": "2.2.8",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.8.10",
+      "title": "Precision Time Measurement (PTM) Messages",
+      "page": 152,
+      "level": 4,
+      "parent": "2.2.8",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.9",
+      "title": "Completion Rules",
+      "page": 153,
+      "level": 3,
+      "parent": "2.2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.10",
+      "title": "TLP Prefix Rules",
+      "page": 156,
+      "level": 3,
+      "parent": "2.2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.10.1",
+      "title": "Local TLP Prefix Processing",
+      "page": 157,
+      "level": 4,
+      "parent": "2.2.10",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.10.1.1",
+      "title": "Vendor Defined Local TLP Prefix",
+      "page": 157,
+      "level": 5,
+      "parent": "2.2.10.1",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.10.2",
+      "title": "End-End TLP Prefix Processing",
+      "page": 157,
+      "level": 4,
+      "parent": "2.2.10",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.10.2.1",
+      "title": "Vendor Defined End-End TLP Prefix",
+      "page": 159,
+      "level": 5,
+      "parent": "2.2.10.2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.2.10.2.2",
+      "title": "Root Ports with End-End TLP Prefix Supported",
+      "page": 159,
+      "level": 5,
+      "parent": "2.2.10.2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.3",
+      "title": "Handling of Received TLPs",
+      "page": 160,
+      "level": 2,
+      "parent": "2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.3.1",
+      "title": "Request Handling Rules",
+      "page": 163,
+      "level": 3,
+      "parent": "2.3",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.3.1.1",
+      "title": "Data Return for Read Requests",
+      "page": 169,
+      "level": 4,
+      "parent": "2.3.1",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.3.2",
+      "title": "Completion Handling Rules",
+      "page": 175,
+      "level": 3,
+      "parent": "2.3",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.4",
+      "title": "Transaction Ordering",
+      "page": 177,
+      "level": 2,
+      "parent": "2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.4.1",
+      "title": "Transaction Ordering Rules",
+      "page": 177,
+      "level": 3,
+      "parent": "2.4",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.4.2",
+      "title": "Update Ordering and Granularity Observed by a Read Transaction",
+      "page": 181,
+      "level": 3,
+      "parent": "2.4",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.4.3",
+      "title": "Update Ordering and Granularity Provided by a Write Transaction",
+      "page": 182,
+      "level": 3,
+      "parent": "2.4",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.5",
+      "title": "Virtual Channel (VC) Mechanism",
+      "page": 182,
+      "level": 2,
+      "parent": "2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.5.1",
+      "title": "Virtual Channel Identification (VC ID)",
+      "page": 184,
+      "level": 3,
+      "parent": "2.5",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.5.2",
+      "title": "TC to VC Mapping",
+      "page": 185,
+      "level": 3,
+      "parent": "2.5",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.5.3",
+      "title": "VC and TC Rules",
+      "page": 186,
+      "level": 3,
+      "parent": "2.5",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.6",
+      "title": "Ordering and Receive Buffer Flow Control",
+      "page": 187,
+      "level": 2,
+      "parent": "2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.6.1",
+      "title": "Flow Control Rules",
+      "page": 188,
+      "level": 3,
+      "parent": "2.6",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.6.1.1",
+      "title": "FC Information Tracked by Transmitter",
+      "page": 192,
+      "level": 4,
+      "parent": "2.6.1",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.6.1.2",
+      "title": "FC Information Tracked by Receiver",
+      "page": 194,
+      "level": 4,
+      "parent": "2.6.1",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.7",
+      "title": "Data Integrity",
+      "page": 198,
+      "level": 2,
+      "parent": "2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.7.1",
+      "title": "ECRC Rules",
+      "page": 198,
+      "level": 3,
+      "parent": "2.7",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.7.2",
+      "title": "Error Forwarding",
+      "page": 202,
+      "level": 3,
+      "parent": "2.7",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.7.2.1",
+      "title": "Error Forwarding Usage Model",
+      "page": 202,
+      "level": 4,
+      "parent": "2.7.2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.7.2.2",
+      "title": "Rules For Use of Data Poisoning",
+      "page": 203,
+      "level": 4,
+      "parent": "2.7.2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.8",
+      "title": "Completion Timeout Mechanism",
+      "page": 204,
+      "level": 2,
+      "parent": "2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.9",
+      "title": "Link Status Dependencies",
+      "page": 205,
+      "level": 2,
+      "parent": "2",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.9.1",
+      "title": "Transaction Layer Behavior in DL_Down Status",
+      "page": 205,
+      "level": 3,
+      "parent": "2.9",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.9.2",
+      "title": "Transaction Layer Behavior in DL_Up Status",
+      "page": 206,
+      "level": 3,
+      "parent": "2.9",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "2.9.3",
+      "title": "Transaction Layer Behavior During Downstream Port Containment",
+      "page": 206,
+      "level": 3,
+      "parent": "2.9",
+      "chapter": 2,
+      "chapter_title": null
+    },
+    {
+      "section_id": "3.1",
+      "title": "Data Link Layer Overview",
+      "page": 209,
+      "level": 2,
+      "parent": "3",
+      "chapter": 3,
+      "chapter_title": null
+    },
+    {
+      "section_id": "3.2",
+      "title": "Data Link Control and Management State Machine",
+      "page": 210,
+      "level": 2,
+      "parent": "3",
+      "chapter": 3,
+      "chapter_title": null
+    },
+    {
+      "section_id": "3.2.1",
+      "title": "Data Link Control and Management State Machine Rules",
+      "page": 211,
+      "level": 3,
+      "parent": "3.2",
+      "chapter": 3,
+      "chapter_title": null
+    },
+    {
+      "section_id": "3.3",
+      "title": "Data Link Feature Exchange",
+      "page": 214,
+      "level": 2,
+      "parent": "3",
+      "chapter": 3,
+      "chapter_title": null
+    },
+    {
+      "section_id": "3.4",
+      "title": "Flow Control Initialization Protocol",
+      "page": 215,
+      "level": 2,
+      "parent": "3",
+      "chapter": 3,
+      "chapter_title": null
+    },
+    {
+      "section_id": "3.4.1",
+      "title": "Flow Control Initialization State Machine Rules",
+      "page": 215,
+      "level": 3,
+      "parent": "3.4",
+      "chapter": 3,
+      "chapter_title": null
+    },
+    {
+      "section_id": "3.4.2",
+      "title": "Scaled Flow Control",
+      "page": 220,
+      "level": 3,
+      "parent": "3.4",
+      "chapter": 3,
+      "chapter_title": null
+    },
+    {
+      "section_id": "3.5",
+      "title": "Data Link Layer Packets (DLLPs)",
+      "page": 221,
+      "level": 2,
+      "parent": "3",
+      "chapter": 3,
+      "chapter_title": null
+    },
+    {
+      "section_id": "3.5.1",
+      "title": "Data Link Layer Packet Rules",
+      "page": 221,
+      "level": 3,
+      "parent": "3.5",
+      "chapter": 3,
+      "chapter_title": null
+    },
+    {
+      "section_id": "3.6",
+      "title": "Data Integrity Mechansisms",
+      "page": 227,
+      "level": 2,
+      "parent": "3",
+      "chapter": 3,
+      "chapter_title": null
+    },
+    {
+      "section_id": "3.6.1",
+      "title": "Introduction",
+      "page": 227,
+      "level": 3,
+      "parent": "3.6",
+      "chapter": 3,
+      "chapter_title": null
+    },
+    {
+      "section_id": "3.6.2",
+      "title": "LCRC, Sequence Number, and Retry Management (TLP Transmitter)",
+      "page": 228,
+      "level": 3,
+      "parent": "3.6",
+      "chapter": 3,
+      "chapter_title": null
+    },
+    {
+      "section_id": "3.6.2.1",
+      "title": "LCRC and Sequence Number Rules (TLP Transmitter)",
+      "page": 228,
+      "level": 4,
+      "parent": "3.6.2",
+      "chapter": 3,
+      "chapter_title": null
+    },
+    {
+      "section_id": "3.6.2.2",
+      "title": "Handling of Received DLLPs",
+      "page": 235,
+      "level": 4,
+      "parent": "3.6.2",
+      "chapter": 3,
+      "chapter_title": null
+    },
+    {
+      "section_id": "3.6.3",
+      "title": "LCRC and Sequence Number (TLP Receiver)",
+      "page": 238,
+      "level": 3,
+      "parent": "3.6",
+      "chapter": 3,
+      "chapter_title": null
+    },
+    {
+      "section_id": "3.6.3.1",
+      "title": "LCRC and Sequence Number Rules (TLP Receiver)",
+      "page": 239,
+      "level": 4,
+      "parent": "3.6.3",
+      "chapter": 3,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.1",
+      "title": "Introduction",
+      "page": 245,
+      "level": 2,
+      "parent": "4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2",
+      "title": "Logical Sub-block",
+      "page": 245,
+      "level": 2,
+      "parent": "4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.1",
+      "title": "Encoding for 2.5GT/s and 5.0GT/s Data Rates",
+      "page": 246,
+      "level": 3,
+      "parent": "4.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.1.1",
+      "title": "Symbol Encoding",
+      "page": 246,
+      "level": 4,
+      "parent": "4.2.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.1.1.1",
+      "title": "Serialization and De-serialization of Data",
+      "page": 246,
+      "level": 5,
+      "parent": "4.2.1.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.1.1.2",
+      "title": "Special Symbols for Framing and Link Management (K Codes)",
+      "page": 247,
+      "level": 5,
+      "parent": "4.2.1.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.1.1.3",
+      "title": "8b/10b Decode Rules",
+      "page": 248,
+      "level": 5,
+      "parent": "4.2.1.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.1.2",
+      "title": "Framing and Application of Symbols to Lanes",
+      "page": 249,
+      "level": 4,
+      "parent": "4.2.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.1.3",
+      "title": "Data Scrambling",
+      "page": 252,
+      "level": 4,
+      "parent": "4.2.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.2",
+      "title": "Encoding for 8.0GT/s and Higher Data Rates",
+      "page": 253,
+      "level": 3,
+      "parent": "4.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.2.1",
+      "title": "Lane Level Encoding",
+      "page": 254,
+      "level": 4,
+      "parent": "4.2.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.2.2",
+      "title": "Ordered Set Blocks",
+      "page": 256,
+      "level": 4,
+      "parent": "4.2.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.2.2.1",
+      "title": "Block Alignment",
+      "page": 256,
+      "level": 5,
+      "parent": "4.2.2.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.2.3",
+      "title": "Data Blocks",
+      "page": 257,
+      "level": 4,
+      "parent": "4.2.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.2.3.1",
+      "title": "Framing Tokens",
+      "page": 258,
+      "level": 5,
+      "parent": "4.2.2.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.2.3.2",
+      "title": "Transmitter Framing Requirements",
+      "page": 263,
+      "level": 5,
+      "parent": "4.2.2.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.2.3.3",
+      "title": "Receiver Framing Requirements",
+      "page": 264,
+      "level": 5,
+      "parent": "4.2.2.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.2.3.4",
+      "title": "Recovery from Framing Errors",
+      "page": 266,
+      "level": 5,
+      "parent": "4.2.2.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.2.4",
+      "title": "Scrambling",
+      "page": 267,
+      "level": 4,
+      "parent": "4.2.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.2.5",
+      "title": "Precoding",
+      "page": 272,
+      "level": 4,
+      "parent": "4.2.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.2.6",
+      "title": "Loopback with 128b/130b Code",
+      "page": 274,
+      "level": 4,
+      "parent": "4.2.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.3",
+      "title": "Link Equalization Procedure for 8.0GT/s and Higher Data Rates",
+      "page": 274,
+      "level": 3,
+      "parent": "4.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.3.1",
+      "title": "Rules for Transmitter Coefficients",
+      "page": 286,
+      "level": 4,
+      "parent": "4.2.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.3.2",
+      "title": "Encoding of Presets",
+      "page": 287,
+      "level": 4,
+      "parent": "4.2.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.4",
+      "title": "Link Initialization and Training",
+      "page": 288,
+      "level": 3,
+      "parent": "4.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.4.1",
+      "title": "Training Sequences",
+      "page": 288,
+      "level": 4,
+      "parent": "4.2.4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.4.2",
+      "title": "Alternate Protocol Negotiation",
+      "page": 298,
+      "level": 4,
+      "parent": "4.2.4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.4.3",
+      "title": "Electrical Idle Sequences (EIOS)",
+      "page": 301,
+      "level": 4,
+      "parent": "4.2.4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.4.4",
+      "title": "Inferring Electrical Idle",
+      "page": 305,
+      "level": 4,
+      "parent": "4.2.4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.4.5",
+      "title": "Lane Polarity Inversion",
+      "page": 306,
+      "level": 4,
+      "parent": "4.2.4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.4.6",
+      "title": "Fast Training Sequence (FTS)",
+      "page": 306,
+      "level": 4,
+      "parent": "4.2.4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.4.7",
+      "title": "Start of Data Stream Ordered Set (SDS Ordered Set)",
+      "page": 308,
+      "level": 4,
+      "parent": "4.2.4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.4.8",
+      "title": "Link Error Recovery",
+      "page": 309,
+      "level": 4,
+      "parent": "4.2.4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.4.9",
+      "title": "Reset",
+      "page": 309,
+      "level": 4,
+      "parent": "4.2.4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.4.9.1",
+      "title": "Fundamental Reset",
+      "page": 309,
+      "level": 5,
+      "parent": "4.2.4.9",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.4.9.2",
+      "title": "Hot Reset",
+      "page": 310,
+      "level": 5,
+      "parent": "4.2.4.9",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.4.10",
+      "title": "Link Data Rate Negotiation",
+      "page": 310,
+      "level": 4,
+      "parent": "4.2.4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.4.11",
+      "title": "Link Width and Lane Sequence Negotiation",
+      "page": 310,
+      "level": 4,
+      "parent": "4.2.4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.4.11.1",
+      "title": "Required and Optional Port Behavior",
+      "page": 310,
+      "level": 5,
+      "parent": "4.2.4.11",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.4.12",
+      "title": "Lane-to-Lane De-skew",
+      "page": 311,
+      "level": 4,
+      "parent": "4.2.4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.4.13",
+      "title": "Lane vs. Link Training",
+      "page": 312,
+      "level": 4,
+      "parent": "4.2.4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.5",
+      "title": "Link Training and Status State Machine (LTSSM) Descriptions",
+      "page": 312,
+      "level": 3,
+      "parent": "4.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.5.1",
+      "title": "DetectOverview",
+      "page": 313,
+      "level": 4,
+      "parent": "4.2.5",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.5.2",
+      "title": "PollingOverview",
+      "page": 313,
+      "level": 4,
+      "parent": "4.2.5",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.5.3",
+      "title": "ConfigurationOverview",
+      "page": 313,
+      "level": 4,
+      "parent": "4.2.5",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.5.4",
+      "title": "RecoveryOverview",
+      "page": 313,
+      "level": 4,
+      "parent": "4.2.5",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.5.5",
+      "title": "L0Overview",
+      "page": 314,
+      "level": 4,
+      "parent": "4.2.5",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.5.6",
+      "title": "L0sOverview",
+      "page": 314,
+      "level": 4,
+      "parent": "4.2.5",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.5.7",
+      "title": "L1Overview",
+      "page": 314,
+      "level": 4,
+      "parent": "4.2.5",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.5.8",
+      "title": "L2Overview",
+      "page": 314,
+      "level": 4,
+      "parent": "4.2.5",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.5.9",
+      "title": "DisabledOverview",
+      "page": 314,
+      "level": 4,
+      "parent": "4.2.5",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.5.10",
+      "title": "LoopbackOverview",
+      "page": 314,
+      "level": 4,
+      "parent": "4.2.5",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.5.11",
+      "title": "Hot ResetOverview",
+      "page": 315,
+      "level": 4,
+      "parent": "4.2.5",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6",
+      "title": "Link Training and Status State Rules",
+      "page": 315,
+      "level": 3,
+      "parent": "4.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.1",
+      "title": "Detect",
+      "page": 317,
+      "level": 4,
+      "parent": "4.2.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.1.1",
+      "title": "Detect.Quiet",
+      "page": 317,
+      "level": 5,
+      "parent": "4.2.6.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.1.2",
+      "title": "Detect.Active",
+      "page": 318,
+      "level": 5,
+      "parent": "4.2.6.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.2",
+      "title": "Polling",
+      "page": 319,
+      "level": 4,
+      "parent": "4.2.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.2.1",
+      "title": "Polling.Active",
+      "page": 319,
+      "level": 5,
+      "parent": "4.2.6.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.2.2",
+      "title": "Polling.Compliance",
+      "page": 320,
+      "level": 5,
+      "parent": "4.2.6.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.2.3",
+      "title": "Polling.Configuration",
+      "page": 324,
+      "level": 5,
+      "parent": "4.2.6.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.2.4",
+      "title": "Polling.Speed",
+      "page": 325,
+      "level": 5,
+      "parent": "4.2.6.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.3",
+      "title": "Configuration",
+      "page": 325,
+      "level": 4,
+      "parent": "4.2.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.3.1",
+      "title": "Configuration.Linkwidth.Start",
+      "page": 326,
+      "level": 5,
+      "parent": "4.2.6.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.3.1.1",
+      "title": "Downstream Lanes",
+      "page": 326,
+      "level": 6,
+      "parent": "4.2.6.3.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.3.1.2",
+      "title": "Upstream Lanes",
+      "page": 327,
+      "level": 6,
+      "parent": "4.2.6.3.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.3.2",
+      "title": "Configuration.Linkwidth.Accept",
+      "page": 329,
+      "level": 5,
+      "parent": "4.2.6.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.3.2.1",
+      "title": "Downstream Lanes",
+      "page": 329,
+      "level": 6,
+      "parent": "4.2.6.3.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.3.2.2",
+      "title": "Upstream Lanes",
+      "page": 330,
+      "level": 6,
+      "parent": "4.2.6.3.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.3.3",
+      "title": "Configuration.Lanenum.Accept",
+      "page": 332,
+      "level": 5,
+      "parent": "4.2.6.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.3.3.1",
+      "title": "Downstream Lanes",
+      "page": 332,
+      "level": 6,
+      "parent": "4.2.6.3.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.3.3.2",
+      "title": "Upstream Lanes",
+      "page": 333,
+      "level": 6,
+      "parent": "4.2.6.3.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.3.4",
+      "title": "Configuration.Lanenum.Wait",
+      "page": 333,
+      "level": 5,
+      "parent": "4.2.6.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.3.4.1",
+      "title": "Downstream Lanes",
+      "page": 333,
+      "level": 6,
+      "parent": "4.2.6.3.4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.3.4.2",
+      "title": "Upstream Lanes",
+      "page": 334,
+      "level": 6,
+      "parent": "4.2.6.3.4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.3.5",
+      "title": "Configuration.Complete",
+      "page": 334,
+      "level": 5,
+      "parent": "4.2.6.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.3.5.1",
+      "title": "Downstream Lanes",
+      "page": 334,
+      "level": 6,
+      "parent": "4.2.6.3.5",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.3.5.2",
+      "title": "Upstream Lanes",
+      "page": 336,
+      "level": 6,
+      "parent": "4.2.6.3.5",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.3.6",
+      "title": "Configuration.Idle",
+      "page": 337,
+      "level": 5,
+      "parent": "4.2.6.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.4",
+      "title": "Recovery",
+      "page": 340,
+      "level": 4,
+      "parent": "4.2.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.4.1",
+      "title": "Recovery.RcvrLock",
+      "page": 340,
+      "level": 5,
+      "parent": "4.2.6.4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.4.2",
+      "title": "Recovery.Equalization",
+      "page": 346,
+      "level": 5,
+      "parent": "4.2.6.4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.4.2.1",
+      "title": "Downstream Lanes",
+      "page": 347,
+      "level": 6,
+      "parent": "4.2.6.4.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.4.2.1.1",
+      "title": "Phase1 of Transmitter Equalization",
+      "page": 347,
+      "level": 7,
+      "parent": "4.2.6.4.2.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.4.2.1.2",
+      "title": "Phase2 of Transmitter Equalization",
+      "page": 349,
+      "level": 7,
+      "parent": "4.2.6.4.2.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.4.2.1.3",
+      "title": "Phase3 of Transmitter Equalization",
+      "page": 350,
+      "level": 7,
+      "parent": "4.2.6.4.2.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.4.2.2",
+      "title": "Upstream Lanes",
+      "page": 352,
+      "level": 6,
+      "parent": "4.2.6.4.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.4.2.2.1",
+      "title": "Phase0 of Transmitter Equalization",
+      "page": 352,
+      "level": 7,
+      "parent": "4.2.6.4.2.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.4.2.2.2",
+      "title": "Phase1 of Transmitter Equalization",
+      "page": 353,
+      "level": 7,
+      "parent": "4.2.6.4.2.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.4.2.2.3",
+      "title": "Phase2 of Transmitter Equalization",
+      "page": 354,
+      "level": 7,
+      "parent": "4.2.6.4.2.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.4.2.2.4",
+      "title": "Phase3 of Transmitter Equalization",
+      "page": 356,
+      "level": 7,
+      "parent": "4.2.6.4.2.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.4.3",
+      "title": "Recovery.Speed",
+      "page": 357,
+      "level": 5,
+      "parent": "4.2.6.4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.4.4",
+      "title": "Recovery.RcvrCfg",
+      "page": 358,
+      "level": 5,
+      "parent": "4.2.6.4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.4.5",
+      "title": "Recovery.Idle",
+      "page": 363,
+      "level": 5,
+      "parent": "4.2.6.4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.5",
+      "title": "L0",
+      "page": 366,
+      "level": 4,
+      "parent": "4.2.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.6",
+      "title": "L0s",
+      "page": 367,
+      "level": 4,
+      "parent": "4.2.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.6.1",
+      "title": "Receiver L0s",
+      "page": 368,
+      "level": 5,
+      "parent": "4.2.6.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.6.1.1",
+      "title": "Rx_L0s.Entry",
+      "page": 368,
+      "level": 6,
+      "parent": "4.2.6.6.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.6.1.2",
+      "title": "Rx_L0s.Idle",
+      "page": 368,
+      "level": 6,
+      "parent": "4.2.6.6.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.6.1.3",
+      "title": "Rx_L0s.FTS",
+      "page": 368,
+      "level": 6,
+      "parent": "4.2.6.6.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.6.2",
+      "title": "Transmitter L0s",
+      "page": 369,
+      "level": 5,
+      "parent": "4.2.6.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.6.2.1",
+      "title": "Tx_L0s.Entry",
+      "page": 369,
+      "level": 6,
+      "parent": "4.2.6.6.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.6.2.2",
+      "title": "Tx_L0s.Idle",
+      "page": 369,
+      "level": 6,
+      "parent": "4.2.6.6.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.6.2.3",
+      "title": "Tx_L0s.FTS",
+      "page": 369,
+      "level": 6,
+      "parent": "4.2.6.6.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.7",
+      "title": "L1",
+      "page": 371,
+      "level": 4,
+      "parent": "4.2.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.7.1",
+      "title": "L1.Entry",
+      "page": 371,
+      "level": 5,
+      "parent": "4.2.6.7",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.7.2",
+      "title": "L1.Idle",
+      "page": 371,
+      "level": 5,
+      "parent": "4.2.6.7",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.8",
+      "title": "L2",
+      "page": 373,
+      "level": 4,
+      "parent": "4.2.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.8.1",
+      "title": "L2.Idle",
+      "page": 373,
+      "level": 5,
+      "parent": "4.2.6.8",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.8.2",
+      "title": "L2.TransmitWake",
+      "page": 374,
+      "level": 5,
+      "parent": "4.2.6.8",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.9",
+      "title": "Disabled",
+      "page": 374,
+      "level": 4,
+      "parent": "4.2.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.10",
+      "title": "Loopback",
+      "page": 375,
+      "level": 4,
+      "parent": "4.2.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.10.1",
+      "title": "Loopback.Entry",
+      "page": 375,
+      "level": 5,
+      "parent": "4.2.6.10",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.10.2",
+      "title": "Loopback.Active",
+      "page": 378,
+      "level": 5,
+      "parent": "4.2.6.10",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.10.3",
+      "title": "Loopback.Exit",
+      "page": 379,
+      "level": 5,
+      "parent": "4.2.6.10",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.6.11",
+      "title": "Hot Reset",
+      "page": 380,
+      "level": 4,
+      "parent": "4.2.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.7",
+      "title": "Clock Tolerance Compensation",
+      "page": 381,
+      "level": 3,
+      "parent": "4.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.7.1",
+      "title": "SKP Ordered Set for 8b/10b Encoding",
+      "page": 382,
+      "level": 4,
+      "parent": "4.2.7",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.7.2",
+      "title": "SKP Ordered Set for 128b/130b Encoding",
+      "page": 382,
+      "level": 4,
+      "parent": "4.2.7",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.7.3",
+      "title": "Rules for Transmitters",
+      "page": 386,
+      "level": 4,
+      "parent": "4.2.7",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.7.4",
+      "title": "Rules for Receivers",
+      "page": 387,
+      "level": 4,
+      "parent": "4.2.7",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.8",
+      "title": "Compliance Pattern in 8b/10b Encoding",
+      "page": 388,
+      "level": 3,
+      "parent": "4.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.9",
+      "title": "Modified Compliance Pattern in 8b/10b Encoding",
+      "page": 389,
+      "level": 3,
+      "parent": "4.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.10",
+      "title": "Compliance Pattern in 128b/130b Encoding",
+      "page": 390,
+      "level": 3,
+      "parent": "4.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.11",
+      "title": "Modified Compliance Pattern in 128b/130b Encoding",
+      "page": 393,
+      "level": 3,
+      "parent": "4.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.12",
+      "title": "Jitter Measurement Pattern in 128b/130b",
+      "page": 393,
+      "level": 3,
+      "parent": "4.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.13",
+      "title": "Lane Margining at Receiver",
+      "page": 394,
+      "level": 3,
+      "parent": "4.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.13.1",
+      "title": "Receiver Number, Margin Type, Usage Model, and Margin Payload Fields",
+      "page": 394,
+      "level": 4,
+      "parent": "4.2.13",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.13.1.1",
+      "title": "Step Margin Execution Status",
+      "page": 399,
+      "level": 5,
+      "parent": "4.2.13.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.13.1.2",
+      "title": "Margin Payload for Step Margin Commands",
+      "page": 399,
+      "level": 5,
+      "parent": "4.2.13.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.13.2",
+      "title": "Margin Command and Response Flow",
+      "page": 400,
+      "level": 4,
+      "parent": "4.2.13",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.2.13.3",
+      "title": "Receiver Margin Testing Requirements",
+      "page": 403,
+      "level": 4,
+      "parent": "4.2.13",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3",
+      "title": "Retimers",
+      "page": 407,
+      "level": 2,
+      "parent": "4",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.1",
+      "title": "Retimer Requirements",
+      "page": 408,
+      "level": 3,
+      "parent": "4.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.2",
+      "title": "Supported Retimer Topologies",
+      "page": 409,
+      "level": 3,
+      "parent": "4.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.3",
+      "title": "Variables",
+      "page": 410,
+      "level": 3,
+      "parent": "4.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.4",
+      "title": "Receiver Impedance Propagation Rules",
+      "page": 411,
+      "level": 3,
+      "parent": "4.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.5",
+      "title": "Switching Between Modes",
+      "page": 411,
+      "level": 3,
+      "parent": "4.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.6",
+      "title": "Forwarding Rules",
+      "page": 411,
+      "level": 3,
+      "parent": "4.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.6.1",
+      "title": "Forwarding Type Rules",
+      "page": 412,
+      "level": 4,
+      "parent": "4.3.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.6.2",
+      "title": "Orientation and Lane Numbers Rules",
+      "page": 412,
+      "level": 4,
+      "parent": "4.3.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.6.3",
+      "title": "Electrical Idle Exit Rules",
+      "page": 413,
+      "level": 4,
+      "parent": "4.3.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.6.4",
+      "title": "Data Rate Change and Determination Rules",
+      "page": 415,
+      "level": 4,
+      "parent": "4.3.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.6.5",
+      "title": "Electrical Idle Entry Rules",
+      "page": 416,
+      "level": 4,
+      "parent": "4.3.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.6.6",
+      "title": "Transmitter Settings Determination Rules",
+      "page": 417,
+      "level": 4,
+      "parent": "4.3.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.6.7",
+      "title": "Ordered Set Modification Rules",
+      "page": 418,
+      "level": 4,
+      "parent": "4.3.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.6.8",
+      "title": "DLLP, TLP, and Logical Idle Modification Rules",
+      "page": 420,
+      "level": 4,
+      "parent": "4.3.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.6.9",
+      "title": "8b/10b Encoding Rules",
+      "page": 421,
+      "level": 4,
+      "parent": "4.3.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.6.10",
+      "title": "8b/10b Scrambling Rules",
+      "page": 421,
+      "level": 4,
+      "parent": "4.3.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.6.11",
+      "title": "Hot Reset Rules",
+      "page": 421,
+      "level": 4,
+      "parent": "4.3.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.6.12",
+      "title": "Disable Link Rules",
+      "page": 421,
+      "level": 4,
+      "parent": "4.3.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.6.13",
+      "title": "Loopback",
+      "page": 422,
+      "level": 4,
+      "parent": "4.3.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.6.14",
+      "title": "Compliance Receive Rules",
+      "page": 423,
+      "level": 4,
+      "parent": "4.3.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.6.15",
+      "title": "Enter Compliance Rules",
+      "page": 424,
+      "level": 4,
+      "parent": "4.3.6",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.7",
+      "title": "Execution Mode Rules",
+      "page": 427,
+      "level": 3,
+      "parent": "4.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.7.1",
+      "title": "CompLoadBoard Rules",
+      "page": 427,
+      "level": 4,
+      "parent": "4.3.7",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.7.1.1",
+      "title": "CompLoadBoard.Entry",
+      "page": 427,
+      "level": 5,
+      "parent": "4.3.7.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.7.1.2",
+      "title": "CompLoadBoard.Pattern",
+      "page": 427,
+      "level": 5,
+      "parent": "4.3.7.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.7.1.3",
+      "title": "CompLoadBoard.Exit",
+      "page": 428,
+      "level": 5,
+      "parent": "4.3.7.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.7.2",
+      "title": "Link Equalization Rules",
+      "page": 429,
+      "level": 4,
+      "parent": "4.3.7",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.7.2.1",
+      "title": "Downstream Lanes",
+      "page": 429,
+      "level": 5,
+      "parent": "4.3.7.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.7.2.1.1",
+      "title": "Phase2",
+      "page": 429,
+      "level": 6,
+      "parent": "4.3.7.2.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.7.2.1.2",
+      "title": "Phase3 Active",
+      "page": 429,
+      "level": 6,
+      "parent": "4.3.7.2.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.7.2.1.3",
+      "title": "Phase3 Passive",
+      "page": 429,
+      "level": 6,
+      "parent": "4.3.7.2.1",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.7.2.2",
+      "title": "Upstream Lanes",
+      "page": 430,
+      "level": 5,
+      "parent": "4.3.7.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.7.2.2.1",
+      "title": "Phase2 Active",
+      "page": 430,
+      "level": 6,
+      "parent": "4.3.7.2.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.7.2.2.2",
+      "title": "Phase2 Passive",
+      "page": 430,
+      "level": 6,
+      "parent": "4.3.7.2.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.7.2.2.3",
+      "title": "Phase3",
+      "page": 430,
+      "level": 6,
+      "parent": "4.3.7.2.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.7.2.3",
+      "title": "Force Timeout",
+      "page": 431,
+      "level": 5,
+      "parent": "4.3.7.2",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.7.3",
+      "title": "Slave Loopback",
+      "page": 431,
+      "level": 4,
+      "parent": "4.3.7",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.7.3.1",
+      "title": "Slave Loopback.Entry",
+      "page": 431,
+      "level": 5,
+      "parent": "4.3.7.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.7.3.2",
+      "title": "Slave Loopback.Active",
+      "page": 432,
+      "level": 5,
+      "parent": "4.3.7.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.7.3.3",
+      "title": "Slave Loopback.Exit",
+      "page": 432,
+      "level": 5,
+      "parent": "4.3.7.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.8",
+      "title": "Retimer Latency",
+      "page": 432,
+      "level": 3,
+      "parent": "4.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.8.1",
+      "title": "Measurement",
+      "page": 432,
+      "level": 4,
+      "parent": "4.3.8",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.8.2",
+      "title": "Maximum Limit on Retimer Latency",
+      "page": 432,
+      "level": 4,
+      "parent": "4.3.8",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.8.3",
+      "title": "Impacts on Upstream and Downstream Ports",
+      "page": 433,
+      "level": 4,
+      "parent": "4.3.8",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.9",
+      "title": "SRIS",
+      "page": 433,
+      "level": 3,
+      "parent": "4.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.10",
+      "title": "L1 PM Substates Support",
+      "page": 434,
+      "level": 3,
+      "parent": "4.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.11",
+      "title": "Retimer Configuration Parameters",
+      "page": 436,
+      "level": 3,
+      "parent": "4.3",
+      "chapter": 4,
+      "chapter_title": null
+    },
+    {
+      "section_id": "4.3.11.1",
+      "title": "Global Parameters",
+      "page": 437,
+      "level": 4,
+      "parent": "4.3.11",
+      "chapter": 4,
+      "chapter_title": null
+    }
+  ],
+  "total_sections": 293,
+  "chapters": [
+    1,
+    2,
+    3,
+    4
+  ]
 }
