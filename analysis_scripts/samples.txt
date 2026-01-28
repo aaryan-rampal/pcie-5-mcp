@@ -1,0 +1,226 @@
+=== SAMPLE 1: LTSSM Content (Page 315) ===
+PAGE 315
+================================================================================
+
+5.0-1.0-PUB—PCI Express® Base Specification Revision 5.0 Version 1.0
+ALoopback Masteris the component requestingLoopback.
+ALoopback Slaveis the component looping back the data.
+Loopbackuses bit 2 (Loopback) in the Training Control field (seeTable 4-6andTable 4-7) which is sent within the TS1
+and TS2 Ordered Sets.
+The entry mechanism for aLoopback Masteris device specific.
+TheLoopback Slavedevice entersLoopbackwhenever two consecutive TS1 Ordered Sets are received with the
+Loopbackbit set.
+IMPLEMENTATION NOTE
+Use of Loopback
+Once in theLoopbackstate, the master can send any pattern of Symbols as long as the encoding rules are
+followed. Once inLoopback, the concept of data scrambling is no longer relevant; what is sent out is looped back.
+The mechanism(s) and/or interface(s) utilized by the Data Link Layer to notify the Physical Layer to enter the
+Loopbackstate is component implementation specific and beyond the scope of this specification.
+4.2.5.11Hot ResetOverview
+The intent of the Hot Reset state is to allow a configured Link and associated downstream device to be reset using
+in-band signaling.
+4.2.6Link Training and Status State Rules
+Various Link status bits are monitored through software with the exception ofLinkUpwhich is monitored by the Data
+Link Layer.Table 4-20describes how the Link status bits must be handled throughout the LTSSM (for more information,
+seeSection3.2forLinkUp;Section7.5.3.8for Link Speed, Link Width, and Link Training;Section6.2for Receiver Error;
+andSection6.7for In-Band Presence). A Receiver may also optionally report an 8b/10b Error in theLane Error Status
+Registerwhen operating in 8b/10b encoding, when allowed to report the error as a Receiver Error inTable 4-20.
+IMPLEMENTATION NOTE
+Receiver Errors During Configuration and Recovery States
+Allowing Receiver Errors to be set while inConfigurationorRecoveryis intended to allow implementations to
+report Link Errors that occur while processing packets in those states. For example, if the LTSSM transitions from
+L0toRecoverywhile a TLP is being received, a Link Error that occurs after the LTSSM transition can be reported.
+Table 4-20 Link Status Mapped to the LTSSM
+Link Link In-Band
+LTSSM State Link Speed LinkUp Receiver Error
+Width Training Presence64
+Detect Undefined Undefined 0b 0b No action 0b
+64.In-band refers to the fact that no sideband signals are used to calculate the presence of a powered up device on the other end of a Link.
+Page 315
+================================================================================
+PAGE 316
+
+=== SAMPLE 2: Register Definition (Page 725) ===
+PAGE 725
+================================================================================
+
+5.0-1.0-PUB—PCI Express® Base Specification Revision 5.0 Version 1.0
+BitLocation Register Attributes
+Description
+field equals 00b (1.0x) and theCaptured Slot Power Limit Valueexceeds EFh, then
+alternative encodings are used (seeSection7.5.3.9).
+This value is set by theSet_Slot_Power_Limit Messageor hardwired to 00h (seeSection
+6.9). The default value is 00h.
+27:26 Captured Slot Power Limit Scale(Upstream Ports only) - Specifies the scale used for the RO
+Slot Power Limit Value.
+Range of Values:
+00b 1.0x
+01b 0.1x
+10b 0.01x
+11b 0.001x
+This value is set by theSet_Slot_Power_Limit Messageor hardwired to 00b (seeSection
+6.9). The default value is 00b.
+28 Function Level Reset Capability- A value of 1b indicates the Function supports the RO
+optional Function Level Reset mechanism described inSection6.6.2.
+This bit applies to Endpoints only. For all other Function types this bit must be hardwired
+to 0b.
+7.5.3.4Device Control Register(Offset 08h)
+TheDevice Control Registercontrols PCI Express device specific parameters.Figure 7-25details allocation of register
+fields in theDevice Control Register;Table 7-20provides the respective bit definitions.
+1514 1211 10 9 8 7 5 4 3 2 1 0
+Correctable Error Reporting Enable
+Non-Fatal Error Reporting Enable
+Fatal Error Reporting Enable
+Unsupported Request Reporting Enable
+Enable Relaxed Ordering
+Max_Payload_Size
+Extended Tag Field Enable
+Phantom Functions Enable
+Aux Power PM Enable
+Enable No Snoop
+Max_Read_Request_Size
+Bridge Configuration Retry Enable / Initiate Function Level Reset
+Figure 7-25 Device Control Register
+Page 725
+================================================================================
+PAGE 726
+
+=== SAMPLE 3: Configuration Space (Page 685) ===
+PAGE 685
+================================================================================
+
+5.0-1.0-PUB—PCI Express® Base Specification Revision 5.0 Version 1.0
+31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 Byte Offset
+Device ID Vendor ID
++000h
+Status Command
++004h
+Class Code Revision ID
++008h
+BIST Header Type Latency Timer Cache Line Size
++00Ch
++010h
++014h
++018h
++01Ch
+Type Specific
++020h
++024h
++028h
++02Ch
++030h
+Capabilities Pointer
++034h
+Type Specific
++038h
+Type Specific Interrupt Pin Interrupt Line
++03Ch
+Figure 7-4 Common Configuration Space Header
+These registers are defined for both Type0 andType1 Configuration Space Headers. The PCI Express-specific
+interpretation of these registers is defined in this section.
+7.5.1.1.1Vendor ID Register(Offset 00h)
+The Vendor ID register isHwInitand the value in this register identifies the manufacturer of the Function. In keeping with
+PCI-SIG procedures, valid vendor identifiers must be allocated by the PCI-SIG to ensure uniqueness. Each vendor must
+have at least one Vendor ID. It is recommended that software read the Vendor ID register to determine if a Function is
+present, where a value of FFFFh indicates that no Function is present.
+Page 685
+================================================================================
+PAGE 686
+
+=== SAMPLE 4: Error Handling (Page 507) ===
+PAGE 507
+================================================================================
+
+5.0-1.0-PUB—PCI Express® Base Specification Revision 5.0 Version 1.0
+6.2.2.2Uncorrectable Errors
+Uncorrectable errors are those error conditions that impact functionality of the interface. There is no mechanism
+defined in this specification to correct these errors. Reporting an uncorrectable error is analogous to asserting SERR# in
+PCI/PCI-X. For more robust error handling by the system, this specification further classifies uncorrectable errors as Fatal
+and Non-fatal.
+6.2.2.2.1Fatal Errors
+Fatal errors are uncorrectable error conditions which render the particular Link and related hardware unreliable. For
+Fatal errors, a reset of the components on the Link may be required to return to reliable operation. Platform handling of
+Fatal errors, and any efforts to limit the effects of these errors, is platform implementation specific.
+6.2.2.2.2Non-Fatal Errors
+Non-fatal errors are uncorrectable errors which cause a particular transaction to be unreliable but the Link is otherwise
+fully functional. Isolating Non-fatal from Fatal errors provides Requester/Receiver logic in a device or system
+management software the opportunity to recover from the error without resetting the components on the Link and
+disturbing other transactions in progress. Devices not associated with the transaction in error are not impacted by the
+error.
+6.2.3Error Signaling
+There are three complementary mechanisms which allow the agent detecting an error to alert the system or another
+device that an error has occurred. The first mechanism is through a Completion Status, the second method is with
+in-band error Messages, and the third is with Error Forwarding (also known as data poisoning).
+Note that it is the responsibility of the agent detecting the error to signal the error appropriately.
+Section6.2.7describes all the errors and how the hardware is required to respond when the error is detected.
+6.2.3.1Completion Status
+The Completion Status field (when status is not Successful Completion) in the Completion header indicates that the
+associated Request failed (seeSection2.2.8.10). This is one method of error reporting which enables the Requester to
+associate an error with a specific Request. In other words, since Non-Posted Requests are not considered complete until
+after the Completion returns, the Completion Status field gives the Requester an opportunity to “fix” the problem at
+some higher level protocol (outside the scope of this specification). For example, if a Read is issued to prefetchable
+Memory Space and the Completion returns with an Unsupported Request Completion Status, the Requester would not
+be in violation of this specification if it chose to reissue the Read Request. Note that from a PCI Express point of view, the
+reissued Read Request is a distinct Request, and there is no relationship (on PCI Express) between the initial Request and
+the reissued Request.
+6.2.3.2Error Messages
+Error Messages are sent to the Root Complex for reporting the detection of errors according to the severity of the error.
+Page 507
+================================================================================
+PAGE 508
+
+=== SAMPLE 5: TOC Structure (Page 3) ===
+PAGE 3
+================================================================================
+
+5.0-1.0-PUB—PCI Express® Base Specification Revision 5.0 Version 1.0
+Table of Contents
+1. Introduction.......................................................................................................................................................................89
+1.1 A Third Generation I/O Interconnect.................................................................................................................................89
+1.2 PCI Express Link.................................................................................................................................................................90
+1.3 PCI Express Fabric Topology.............................................................................................................................................92
+1.3.1 Root Complex............................................................................................................................................................92
+1.3.2 Endpoints...................................................................................................................................................................93
+1.3.2.1 Legacy Endpoint Rules......................................................................................................................................93
+1.3.2.2 PCI Express Endpoint Rules...............................................................................................................................94
+1.3.2.3 Root Complex Integrated Endpoint Rules........................................................................................................94
+1.3.3 Switch.........................................................................................................................................................................95
+1.3.4 Root Complex Event Collector..................................................................................................................................96
+1.3.5 PCI Express to PCI/PCI-X Bridge................................................................................................................................96
+1.4 Hardware/Software Model for Discovery, Configuration and Operation........................................................................96
+1.5 PCI Express Layering Overview.........................................................................................................................................97
+1.5.1 Transaction Layer......................................................................................................................................................99
+1.5.2 Data Link Layer..........................................................................................................................................................99
+1.5.3 Physical Layer............................................................................................................................................................99
+1.5.4 Layer Functions and Services.................................................................................................................................100
+1.5.4.1 Transaction Layer Services.............................................................................................................................100
+1.5.4.2 Data Link Layer Services..................................................................................................................................101
+1.5.4.3 Physical Layer Services...................................................................................................................................101
+1.5.4.4 Inter-Layer Interfaces......................................................................................................................................102
+1.5.4.4.1 Transaction/Data Link Interface..............................................................................................................102
+1.5.4.4.2 Data Link/Physical Interface...................................................................................................................102
+2. Transaction Layer Specification......................................................................................................................................103
+2.1 Transaction Layer Overview............................................................................................................................................103
+2.1.1 Address Spaces, Transaction Types, and Usage.....................................................................................................104
+2.1.1.1 Memory Transactions......................................................................................................................................104
+2.1.1.2 I/O Transactions...............................................................................................................................................104
+2.1.1.3 Configuration Transactions.............................................................................................................................105
+2.1.1.4 Message Transactions.....................................................................................................................................105
+2.1.2 Packet Format Overview.........................................................................................................................................105
+2.2 Transaction Layer Protocol - Packet Definition..............................................................................................................107
+2.2.1 Common Packet Header Fields...............................................................................................................................107
+2.2.2 TLPs with Data Payloads - Rules.............................................................................................................................110
+2.2.3 TLP Digest Rules......................................................................................................................................................113
+2.2.4 Routing and Addressing Rules................................................................................................................................113
+2.2.4.1 Address-Based Routing Rules.........................................................................................................................113
+2.2.4.2 ID Based Routing Rules...................................................................................................................................115
+2.2.5 First/Last DW Byte Enables Rules............................................................................................................................117
+2.2.6 Transaction Descriptor............................................................................................................................................119
+2.2.6.1 Overview..........................................................................................................................................................119
+2.2.6.2 Transaction Descriptor - Transaction ID Field................................................................................................120
+2.2.6.3 Transaction Descriptor - Attributes Field........................................................................................................125
+2.2.6.4 Relaxed OrderingandID-Based OrderingAttributes.....................................................................................126
+2.2.6.5 No SnoopAttribute..........................................................................................................................................126
+Page 3
+================================================================================
+PAGE 4

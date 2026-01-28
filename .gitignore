@@ -1,0 +1,7 @@
+.venv/
+.claude/
+*.pyc
+__pycache__/
+
+*.pdf
+docs/

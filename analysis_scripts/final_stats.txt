@@ -1,0 +1,67 @@
+PCIe 5.0 Spec - Final Statistics
+=================================
+
+1. DOCUMENT SIZE:
+   Total pages: 1299
+   Total lines:    52203
+   File size: 3.3M
+
+2. MAJOR CHAPTERS (from TOC):
+1. Introduction.......................................................................................................................................................................89
+2. Transaction Layer Specification......................................................................................................................................103
+3. Data Link Layer Specification..........................................................................................................................................209
+4. Physical Layer Logical Block...........................................................................................................................................245
+5. Power Management.........................................................................................................................................................439
+
+3. KEY HARDWARE CONCEPTS (mention counts):
+   LTSSM: 210
+   Register: 3865
+   Capability: 2214
+   Configuration Space: 289
+   Link Training: 46
+   State Machine: 57
+   Flow Control: 223
+   Transaction Layer: 149
+   Data Link Layer: 221
+   Physical Layer: 167
+   Error: 1702
+   Completion Timeout: 103
+   Retry: 74
+   Ordered Set: 1094
+
+4. REFERENCE PATTERNS:
+   'see Section' refs: 5
+   'Table' refs: 1053
+   'Figure' refs: 1139
+
+5. CHAPTER 4 (Physical Layer) - LTSSM PAGES:
+PAGE 267
+PAGE 299
+PAGE 304
+PAGE 310
+PAGE 316
+PAGE 318
+PAGE 319
+PAGE 358
+
+6. CHAPTER 7 (Config Registers) - KEY PAGES:
+PAGE 673
+PAGE 674
+PAGE 675
+PAGE 676
+PAGE 677
+PAGE 678
+PAGE 679
+PAGE 680
+PAGE 681
+PAGE 682
+PAGE 683
+PAGE 684
+PAGE 685
+PAGE 686
+PAGE 687
+PAGE 688
+PAGE 689
+PAGE 690
+PAGE 691
+PAGE 692

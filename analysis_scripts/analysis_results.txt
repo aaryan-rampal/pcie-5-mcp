@@ -1,0 +1,230 @@
+Running structural analysis...
+=== 1. CHAPTER STRUCTURE ===
+Main chapters (lines starting with single digit):
+39:1. Introduction.......................................................................................................................................................................89
+63:2. Transaction Layer Specification......................................................................................................................................103
+149:3. Data Link Layer Specification..........................................................................................................................................209
+166:4. Physical Layer Logical Block...........................................................................................................................................245
+374:5. Power Management.........................................................................................................................................................439
+432:6. System Architecture........................................................................................................................................................495
+659:7. Software Initialization and Configuration......................................................................................................................673
+1046:8. Electrical Sub-Block......................................................................................................................................................1001
+1159:9. Single Root I/O Virtualization and Sharing...................................................................................................................1099
+3255:1. A status that applies to a posted or non-posted Request that the Completer is permanently unable to
+3258:2. A status indication returned with a Completion for a non-posted Request that suffered a Completer Abort
+3315:1. A physical or logical entity that performs a specific type of I/O.
+3316:2. A component on either end of a PCI Express Link.
+3317:3. A common imprecise synonym for Function, particularly when a device has a single Function.
+3321:1. The relative position of an interconnect/System Element (Port/component) that is farther from the Root
+3325:2. A direction of information flow where the information is flowing away from the Root Complex.
+3553:1. Logically, an interface between a component and a PCI Express Link.
+3554:2. Physically, a group of Transmitters and Receivers located on the same chip that define a Link.
+3578:1. Logically, an interface between a Retimer and a PCI Express Link Segment.
+3579:2. Physically, a group of Transmitters and Receivers located on the same Retimer chip that define a Link
+
+=== 2. LTSSM PAGES ===
+Pages containing LTSSM:
+
+=== 3. REGISTER SECTIONS ===
+Section headers about registers:
+4.3.12 In Band Register Access...........................................................................................................................................438
+6.7.2 Registers Grouped by Hot-Plug Element Association............................................................................................563
+6.7.2.1 Attention Button Registers..............................................................................................................................563
+6.7.2.2 Attention Indicator Registers..........................................................................................................................563
+6.7.2.3 Power Indicator Registers...............................................................................................................................563
+6.7.2.4 Power Controller Registers..............................................................................................................................563
+6.7.2.5 Presence Detect Registers...............................................................................................................................564
+6.7.2.6 MRL Sensor Registers......................................................................................................................................564
+6.7.2.7 Electromechanical Interlock Registers...........................................................................................................564
+6.7.2.8 Command Completed Registers.....................................................................................................................564
+6.7.2.9 Port Capabilities and Slot Information Registers...........................................................................................565
+6.7.2.10 Hot-Plug Interrupt Control Register................................................................................................................565
+7.2.3 Root Complex Register Block(RCRB)......................................................................................................................680
+7.4 Configuration Register Types..........................................................................................................................................683
+7.5.1 PCI-Compatible Configuration Registers................................................................................................................684
+7.5.1.1.1 Vendor ID Register(Offset 00h)...............................................................................................................685
+7.5.1.1.2 Device ID Register(Offset 02h)................................................................................................................686
+7.5.1.1.3 Command Register(Offset 04h)..............................................................................................................686
+7.5.1.1.4 Status Register(Offset 06h).....................................................................................................................688
+7.5.1.1.5 Revision ID Register(Offset 08h).............................................................................................................691
+7.5.1.1.6 Class Code Register(Offset 09h).............................................................................................................691
+7.5.1.1.7 Cache Line Size Register(Offset 0Ch).....................................................................................................692
+7.5.1.1.8 Latency Timer Register(Offset 0Dh).......................................................................................................692
+7.5.1.1.9 Header Type Register(Offset 0Eh)..........................................................................................................692
+7.5.1.1.10 BIST Register(Offset 0Fh)........................................................................................................................693
+7.5.1.1.12 Interrupt Line Register(Offset 3Ch)........................................................................................................694
+7.5.1.1.13 Interrupt Pin Register(Offset 3Dh)..........................................................................................................694
+7.5.1.1.14 Error Registers..........................................................................................................................................694
+7.5.1.2.1 Base Address Registers(Offset 10h - 24h)...............................................................................................696
+7.5.1.2.2 Cardbus CIS Pointer Register(Offset 28h)..............................................................................................699
+7.5.1.2.3 Subsystem Vendor ID Register/Subsystem ID Register(Offset 2Ch/2Eh)..............................................700
+7.5.1.2.4 Expansion ROM Base Address Register(Offset 30h)...............................................................................700
+7.5.1.2.5 Min_Gnt Register/Max_Lat Register(Offset 3Eh/3Fh)............................................................................703
+7.5.1.3.1 Type 1 Base Address Registers(Offset 10h-14h)....................................................................................704
+7.5.1.3.2 Primary Bus Number Register(Offset 18h)............................................................................................705
+7.5.1.3.3 Secondary Bus Number Register(Offset 19h)........................................................................................705
+7.5.1.3.4 Subordinate Bus Number Register(Offset 1Ah).....................................................................................705
+7.5.1.3.6 I/O Base/I/O LimitRegisters(Offset 1Ch/1Dh)........................................................................................705
+7.5.1.3.7 Secondary Status Register(Offset 1Eh)..................................................................................................706
+7.5.1.3.8 Memory Base Register/Memory Limit Register(Offset 20h/22h)...........................................................708
+7.5.1.3.9 Prefetchable Memory Base/Prefetchable Memory LimitRegisters (Offset 24h/26h)...........................708
+7.5.1.3.10 Prefetchable Base Upper 32 Bits/Prefetchable Limit Upper 32 BitsRegisters (Offset 28h/2Ch).........709
+7.5.1.3.11 I/O Base Upper 16 Bits/I/O Limit Upper 16 BitsRegisters (Offset 30h/32h)..........................................709
+7.5.1.3.12 Expansion ROM Base Address Register (Offset 38h)...............................................................................709
+7.5.1.3.13 Bridge Control Register(Offset 3Eh).......................................................................................................709
+7.5.2.1 Power Management Capabilities Register (Offset 00h)..................................................................................712
+7.5.2.2 Power Management Control/Status Register (Offset 04h).............................................................................714
+7.5.3.1 PCI Express Capability List Register(Offset 00h)............................................................................................719
+7.5.3.2 PCI Express Capabilities Register(Offset 02h)................................................................................................720
+7.5.3.3 Device Capabilities Register(Offset 04h)........................................................................................................722
+
+=== 4. KEY SECTION PATTERNS ===
+Sections about Link Training:
+4.2.4.13 Lane vs. Link Training......................................................................................................................................312
+4.2.5 Link Training and Status State Machine (LTSSM) Descriptions..............................................................................312
+4.2.6 Link Training and Status State Rules......................................................................................................................315
+4.2.4.13Lane vs. Link Training
+4.2.5Link Training and Status State Machine (LTSSM) Descriptions
+4.2.6Link Training and Status State Rules
+
+=== 5. TABLE PATTERNS ===
+Table references (first 50):
+(before Table 2-43)
+-Section8.4.2.1; corrected references from Table 8-11 to Table 8-10
+defined, and different Transaction types are defined, each with its own unique intended usage, as shown inTable 2-1.
+Table 2-1 Transaction Types for Different Address Spaces
+• Fmt[2:0] - Format of TLP (seeTable 2-2) - bits 7:5 of byte0
+• Length[9:0] - Length of data payload in DW (seeTable 2-4) - bits 1:0 of byte2 concatenated with bits 7:0 of
+Table 2-2 Fmt[2:0] Field Values
+Table 2-3 Fmt[2:0] and Type[4:0] Field Encodings
+mechanism (seeTable 2-17).
+LPrfx 100 0L3L2L1L0 Local TLP Prefix - The sub-field L[3:0] specifies the Local TLP Prefix type (seeTable 2-36).
+Table 2-4 Length[9:0] Field Encoding
+Table 10-1. For all other Requests, the AT field is Reserved unless explicitly stated otherwise. LN Reads and LN
+• If TH is Set, the PH field is encoded as shown inTable 2-15. If TH is Clear, the PH field is Reserved.
+• Address mapping to the TLP header is shown inTable 2-5.
+Table 2-5 Address Field Mapping
+inTable 2-6,Figure 2-9, andFigure 2-11.
+Table 2-6 Header Field Locations for
+Table 2-7 Header Field Locations for
+• Table 2-8shows the correspondence between the bits of the Byte Enables fields, their location in the Request
+Table 2-8 Byte Enables Location and
+Table 2-9defines the states of the Relaxed Ordering and ID-Based Ordering attribute fields. These attributes are
+Table 2-9 Ordering Attributes
+Table 2-10defines the states of theNo Snoopattribute field. Note that theNo Snoopattribute does not alter Transaction
+Table 2-10 Cache Coherency Management Attribute
+Table 2-11defines the TC encodings.
+Table 2-11 Definition of TC Field Encodings
+Table 2-12. If a Completer supports AtomicOps, the following rules apply. The Completer must check the
+Table 2-12 Length Field Values for AtomicOp Requests
+Table 2-13 TPH TLP Prefix
+• The Processing Hints (PH) fields mapping is shown inFigure 2-22,Figure 2-23andTable 2-14.
+Table 2-14 Location of PH[1:0] in TLP
+• The PH[1:0] field provides information about the data access patterns and is defined as described inTable 2-15
+Table 2-15 Processing Hint Encoding
+The Steering Tag (ST) fields are mapped to the TLP header as shown inFigure 2-24,Figure 2-25andTable 2-16.
+Table 2-16 Location of ST[7:0] in TLP Headers
+◦ Message Routing r[2:0] values are defined inTable 2-17
+Table 2-17 Message Routing
+• The INTx mechanism uses eight distinct Messages (seeTable 2-18).
+Table 2-18 INTx Mechanism Messages
+according to the Device Number of the device on the secondary side of the Bridge, as shown inTable 2-19.
+Table 2-19 Bridge Mapping for INTx Virtual Wires
+and associated interrupt resources in the system interrupt controller. The remapping described byTable 2-19is
+• Table 2-20defines the Power Management Messages.
+Table 2-20 Power Management Messages
+• Table 2-21defines the Error Signaling Messages.
+Table 2-21 Error Signaling Messages
+• TheERR_COR Subclass(ECS) field is encoded as shown inTable 2-22, indicating theERR_CORMessage
+Table 2-22 ERR_COR Subclass(ECS) Field Encodings
+• Table 2-23defines the Unlock Messages.
+Table 2-23 Unlock Message
+
+=== 6. CAPABILITY STRUCTURES ===
+Capability sections:
+6.2.4.2 Multiple Error Handling (Advanced Error Reporting Capability)...................................................................515
+6.8 Power Budgeting Capability............................................................................................................................................573
+6.12.1 ACS Component Capability Requirements.............................................................................................................581
+6.12.4 ACS Enhanced Capability........................................................................................................................................587
+6.14.3 Multicast Capability Structure Field Updates.........................................................................................................597
+6.15.3.2 Root Ports with AtomicOp Routing Capability...............................................................................................603
+6.16Dynamic Power Allocation (DPA) Capability..................................................................................................................604
+6.16.1 DPA Capability withMulti-Function Devices..........................................................................................................606
+6.17.4 TPH Capability.........................................................................................................................................................608
+7.5.2 PCI Power Management CapabilityStructure........................................................................................................712
+7.5.3 PCI Express CapabilityStructure.............................................................................................................................718
+7.5.3.1 PCI Express Capability List Register(Offset 00h)............................................................................................719
+7.6.3 PCI Express Extended Capability Header................................................................................................................772
+7.7.1 MSI CapabilityStructures........................................................................................................................................773
+7.7.1.1 MSI Capability Header(Offset 00h).................................................................................................................775
+7.7.2 MSI-X Capabilityand Table Structure.....................................................................................................................781
+7.7.2.1 MSI-X Capability Header(Offset 00h)..............................................................................................................784
+7.7.3 Secondary PCI Express Extended Capability..........................................................................................................789
+7.7.3.1 Secondary PCI Express Extended Capability Header(Offset 00h).................................................................792
+7.7.4 Data Link Feature Extended Capability...................................................................................................................796
+7.7.4.1 Data Link Feature Extended Capability Header(Offset 00h).........................................................................797
+7.7.5 Physical Layer 16.0GT/s Extended Capability........................................................................................................799
+7.7.5.1 Physical Layer 16.0GT/s Extended Capability Header(Offset 00h)...............................................................800
+7.7.6 Physical Layer 32.0GT/s Extended Capability........................................................................................................806
+7.7.6.1 Physical Layer 32.0GT/s Extended Capability Header(Offset 00h)...............................................................807
+7.7.7 Lane Margining at the Receiver Extended Capability.............................................................................................817
+7.7.7.1 Lane Margining at the Receiver Extended Capability Header(Offset 00h)...................................................819
+7.7.8 ACS Extended Capability.........................................................................................................................................822
+7.7.8.1 ACS Extended Capability Header(Offset 00h)................................................................................................823
+7.7.8.2 ACS Capability Register(Offset 04h)...............................................................................................................824
+
+=== 7. STATE MACHINE MENTIONS ===
+State machine references:
+3.2 Data Link Control and Management State Machine.......................................................................................................210
+3.2.1 Data Link Control and Management State Machine Rules.....................................................................................211
+3.4.1 Flow Control Initialization State Machine Rules.....................................................................................................215
+4.2.5 Link Training and Status State Machine (LTSSM) Descriptions..............................................................................312
+5.3.3.5 PM_PMEDelivery State Machine.....................................................................................................................459
+Figure3-2 Data Link Control and Management State Machine.......................................................................................211
+Figure4-26 Main State Diagram for Link Training and Status State Machine...................................................................317
+Figure4-27 DetectSubstate Machine.................................................................................................................................319
+Figure4-28 PollingSubstate Machine................................................................................................................................325
+Figure4-29 ConfigurationSubstate Machine....................................................................................................................340
+Figure4-30 RecoverySubstate Machine............................................................................................................................365
+Figure4-31 L0sSubstate Machine......................................................................................................................................371
+Figure4-32 L1Substate Machine........................................................................................................................................373
+Figure4-33 L2Substate Machine........................................................................................................................................374
+Figure4-34 LoopbackSubstate Machine...........................................................................................................................380
+Figure5-5 A Conceptual PME Control State Machine......................................................................................................459
+• Returning all PCI Express-specific registers, state machines and externally observable state to the specified
+3.2 Data Link Control and Management State Machine
+Management State Machine (DLCMSM) to perform these tasks. The states for this machine are described below, and are
+Figure 3-2 Data Link Control and Management State Machine
+3.2.1Data Link Control and Management State Machine Rules
+3.4.1Flow Control Initialization State Machine Rules
+Management State Machine to transition to the DL_Inactive state).
+◦ The Data Link Control and Management State Machine is in the DL_Active state
+4.2.5Link Training and Status State Machine (LTSSM) Descriptions
+All timeout values specified for the Link Training and Status state machine (LTSSM) are minus 0 seconds and plus 50%
+The state machine rules for configuring and operating a PCI Express Link are defined in the following sections.
+Figure 4-26 Main State Diagram for Link Training and Status State Machine
+TheDetectsubstate machine is shown inFigure 4-27.
+Figure 4-27 DetectSubstate Machine
+
+=== 8. ERROR HANDLING ===
+Error-related sections:
+2.2.8.3 Error Signaling Messages................................................................................................................................140
+2.7.2 Error Forwarding.....................................................................................................................................................202
+2.7.2.1 Error Forwarding Usage Model.......................................................................................................................202
+4.2.2.3.4 Recovery from Framing Errors................................................................................................................266
+4.2.4.8 Link Error Recovery.........................................................................................................................................309
+6.2 Error Signaling and Logging............................................................................................................................................505
+6.2.2 Error Classification..................................................................................................................................................505
+6.2.2.1 Correctable Errors...........................................................................................................................................506
+6.2.2.2 Uncorrectable Errors.......................................................................................................................................507
+6.2.2.2.1 Fatal Errors...............................................................................................................................................507
+6.2.2.2.2 Non-Fatal Errors.......................................................................................................................................507
+6.2.3 Error Signaling.........................................................................................................................................................507
+6.2.3.2 Error Messages.................................................................................................................................................507
+6.2.3.2.1 Uncorrectable Error Severity Programming (Advanced Error Reporting)............................................509
+6.2.3.2.2 Masking Individual Errors........................................................................................................................509
+6.2.3.2.3 Error Pollution.........................................................................................................................................509
+6.2.3.2.4 Advisory Non-Fatal Error Cases...............................................................................................................510
+6.2.3.3 Error Forwarding (Data Poisoning).................................................................................................................512
+6.2.3.4 Optional Error Checking..................................................................................................................................513
+6.2.4 Error Logging...........................................................................................................................................................513
